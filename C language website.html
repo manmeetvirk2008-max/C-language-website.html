@@ -1,0 +1,5179 @@
+ <!DOCTYPE html>
+<html>
+<head>
+    <title>BCA C Programming</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f0f6ff;
+            color: #183153;
+        }
+
+        header {
+            background: #164b9b;
+            color: white;
+            text-align: center;
+            padding: 30px;
+        }
+
+        header h1 {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+
+        nav {
+            background: white;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #164b9b;
+            margin: 10px;
+            font-weight: bold;
+        }
+
+        .welcome {
+            text-align: center;
+            padding: 30px 15px;
+        }
+
+        .welcome h2 {
+            color: #164b9b;
+            margin-bottom: 10px;
+        }
+
+        .container {
+            width: 90%;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            padding: 20px 0 40px;
+        }
+
+        .card {
+            background: white;
+            padding: 25px;
+            text-align: center;
+            border-radius: 12px;
+            box-shadow: 0 3px 10px #d0dff5;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h3 {
+            color: #164b9b;
+            margin-bottom: 12px;
+        }
+
+        .card p {
+            font-size: 14px;
+            margin-bottom: 18px;
+            color: #555;
+        }
+
+        .card a {
+            text-decoration: none;
+            background: #164b9b;
+            color: white;
+            padding: 10px 18px;
+            border-radius: 6px;
+            display: inline-block;
+        }
+
+        .card a:hover {
+            background: #0b3270;
+        }
+
+        footer {
+            background: #164b9b;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>C Programming</h1>
+    <p>BCA First Year | Programming Practice Website</p>
+</header>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="#topics">Topics</a>
+</nav>
+
+<div class="welcome">
+    <h2>Welcome to C Programming</h2>
+    <p>Learn C programming with simple notes, programs and examples.</p>
+</div>
+
+<div class="container" id="topics">
+
+    <div class="card">
+        <h3>1. Basic Input/Output</h3>
+        <p>Learn printf(), scanf() and basic programs.</p>
+        <a href="basic.html">Explore Topic</a>
+    </div>
+
+    <div class="card">
+        <h3>2. Operators</h3>
+        <p>Learn arithmetic and logical operators.</p>
+        <a href="operators.html">Explore Topic</a>
+    </div>
+
+    <div class="card">
+        <h3>3. Decision Control</h3>
+        <p>Learn if, if-else and switch statements.</p>
+        <a href="decision.html">Explore Topic</a>
+    </div>
+
+    <div class="card">
+        <h3>4. Loops</h3>
+        <p>Learn for, while and do-while loops.</p>
+        <a href="loops.html">Explore Topic</a>
+    </div>
+
+    <div class="card">
+        <h3>5. One-Dimensional Arrays</h3>
+        <p>Learn array basics and programs.</p>
+        <a href="arrays.html">Explore Topic</a>
+    </div>
+
+    <div class="card">
+        <h3>6. Multidimensional Arrays</h3>
+        <p>Learn 2D arrays and matrix programs.</p>
+        <a href="matrix.html">Explore Topic</a>
+    </div>
+
+    <div class="card">
+        <h3>7. Strings</h3>
+        <p>Learn string functions and programs.</p>
+        <a href="strings.html">Explore Topic</a>
+    </div>
+
+    <div class="card">
+        <h3>8. Functions</h3>
+        <p>Learn user-defined functions in C.</p>
+        <a href="functions.html">Explore Topic</a>
+    </div>
+
+    <div class="card">
+        <h3>9. Structures</h3>
+        <p>Learn structures and student records.</p>
+        <a href="structures.html">Explore Topic</a>
+    </div>
+
+    <div class="card">
+        <h3>10. Nested Loops</h3>
+        <p>Learn nested loops and pattern programs.</p>
+        <a href="nested.html">Explore Topic</a>
+    </div>
+
+</div>
+
+<footer>
+    <p>© 2026 C Programming | BCA-1 Student Project</p>
+</footer>
+
+</body>
+</html>
+[2:55 pm, 1/11/2026] Manmeet virk🕊: <!DOCTYPE html>
+<html>
+<head>
+    <title>Basic Input Output - C Programming</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f0f6ff;
+            color: #183153;
+            margin: 0;
+        }
+
+        header {
+            background: #164b9b;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        .nav {
+            text-align: center;
+            padding: 15px;
+            background: white;
+        }
+
+        .nav a {
+            color: #164b9b;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 10px;
+        }
+
+        .container {
+            width: 90%;
+            margin: 25px auto;
+        }
+
+        .search {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #aac5e8;
+            border-radius: 8px;
+            font-size: 16px;
+            box-sizing: border-box;
+            margin-bottom: 25px;
+        }
+
+        .question {
+            background: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            box-shadow: 0 3px 8px #d0dff5;
+        }
+
+        h2, h3 {
+            color: #164b9b;
+        }
+
+        button {
+            background: #164b9b;
+            color: white;
+            padding: 10px 18px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #0b3270;
+        }
+
+        .answer {
+            display: none;
+            margin-top: 15px;
+        }
+
+        pre {
+            background: #eaf1fc;
+            padding: 15px;
+            border-radius: 8px;
+            overflow-x: auto;
+        }
+
+        footer {
+            background: #164b9b;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Basic Input / Output</h1>
+    <p>BCA First Year | C Programming</p>
+</header>
+
+<div class="nav">
+    <a href="index.html">🏠 Home</a>
+    <a href="operators.html">Next Topic →</a>
+</div>
+
+<div class="container">
+
+    <h2>Basic Input / Output Programs</h2>
+    <p>Practice beginner-friendly C programs with examples.</p>
+
+    <input type="text" class="search" id="search"
+    placeholder="Search questions..." onkeyup="searchQuestions()">
+
+    <!-- Question 1 -->
+    <div class="question">
+        <h3>Q1. Print "Today I made my first C Program."</h3>
+        <button onclick="showAnswer(this)">Show Answer</button>
+
+        <div class="answer">
+            <pre><code>#include &lt;stdio.h&gt;
+
+int main() {
+    printf("Today I made my first C Program.");
+    return 0;
+}</code></pre>
+
+            <p><b>Output:</b></p>
+            <pre>Today I made my first C Program.</pre>
+        </div>
+    </div>
+
+    <!-- Question 2 -->
+    <div class="question">
+        <h3>Q2. Enter and display a character.</h3>
+        <button onclick="showAnswer(this)">Show Answer</button>
+
+        <div class="answer">
+            <pre><code>#include &lt;stdio.h&gt;
+
+int main() {
+    char ch;
+
+    printf("Enter a character: ");
+    scanf("%c", &amp;ch);
+
+    printf("Character = %c", ch);
+
+    return 0;
+}</code></pre>
+
+            <p><b>Input:</b> A</p>
+            <p><b>Output:</b> Character = A</p>
+        </div>
+    </div>
+
+    <!-- Question 3 -->
+    <div class="question">
+        <h3>Q3. Enter four characters and print each on a separate line.</h3>
+        <button onclick="showAnswer(this)">Show Answer</button>
+
+        <div class="answer">
+            <pre><code>#include &lt;stdio.h&gt;
+
+int main() {
+    char a, b, c, d;
+
+    printf("Enter four characters: ");
+    scanf(" %c %c %c %c", &amp;a, &amp;b, &amp;c, &amp;d);
+
+    printf("%c\\n%c\\n%c\\n%c", a, b, c, d);
+
+    return 0;
+}</code></pre>
+
+            <p><b>Input:</b> A B C D</p>
+            <p><b>Output:</b></p>
+            <pre>A
+B
+C
+D</pre>
+        </div>
+    </div>
+
+    <!-- Question 4 -->
+    <div class="question">
+        <h3>Q4. Print a single quotation mark.</h3>
+        <button onclick="showAnswer(this)">Show Answer</button>
+
+        <div class="answer">
+            <pre><code>#include &lt;stdio.h&gt;
+
+int main() {
+    printf("\\'");
+
+    return 0;
+}</code></pre>
+
+            <p><b>Output:</b> '</p>
+        </div>
+    </div>
+
+    <!-- Question 5 -->
+    <div class="question">
+        <h3>Q5. Enter two characters and display their ASCII values.</h3>
+        <button onclick="showAnswer(this)">Show Answer</button>
+
+        <div class="answer">
+            <pre><code>#include &lt;stdio.h&gt;
+
+int main() {
+    char a, b;
+
+    printf("Enter two characters: ");
+    scanf(" %c %c", &amp;a, &amp;b);
+
+    printf("ASCII of %c = %d\\n", a, a);
+    printf("ASCII of %c = %d", b, b);
+
+    return 0;
+}</code></pre>
+
+            <p><b>Input:</b> A a</p>
+            <p><b>Output:</b></p>
+            <pre>ASCII of A = 65
+ASCII of a = 97</pre>
+        </div>
+    </div>
+
+    <!-- Question 6 -->
+    <div class="question">
+        <h3>Q6. Display ASCII values from 0 to 127.</h3>
+        <button onclick="showAnswer(this)">Show Answer</button>
+
+        <div class="answer">
+            <pre><code>#include &lt;stdio.h&gt;
+
+int main() {
+    int i;
+
+    for(i=0; i&lt;=127; i++)
+        printf("%d = %c\\n", i, i);
+
+    return 0;
+}</code></pre>
+
+            <p><b>Output:</b> Displays ASCII codes from 0 to 127.</p>
+            <p><b>Note:</b> Some values are control characters and may not be visible.</p>
+        </div>
+    </div>
+
+</div>
+
+<footer>
+    <p>© 2026 C Programming | BCA-1 Student Project</p>
+</footer>
+
+<script>
+    function showAnswer(button) {
+        let answer = button.nextElementSibling;
+
+        if (answer.style.display === "block") {
+            answer.style.display = "none";
+            button.innerText = "Show Answer";
+        } else {
+            answer.style.display = "block";
+            button.innerText = "Hide Answer";
+        }
+    }
+
+    function searchQuestions() {
+        let input = document.getElementById("search").value.toLowerCase();
+        let questions = document.getElementsByClassName("question");
+
+        for (let i = 0; i < questions.length; i++) {
+            let text = questions[i].innerText.toLowerCase();
+
+            if (text.includes(input)) {
+                questions[i].style.display = "block";
+            } else {
+                questions[i].style.display = "none";
+            }
+        }
+    }
+</script>
+
+</body>
+</html>
+[3:02 pm, 1/11/2026] Manmeet virk🕊: <!DOCTYPE html>
+<html>
+<head>
+    <title>Operators - C Programming</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f0f6ff;
+            color: #183153;
+            margin: 0;
+        }
+
+        header {
+            background: #164b9b;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        .nav {
+            background: white;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .nav a {
+            color: #164b9b;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 10px;
+        }
+
+        .container {
+            width: 90%;
+            margin: 25px auto;
+        }
+
+        .search {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #aac5e8;
+            border-radius: 8px;
+            font-size: 16px;
+            box-sizing: border-box;
+            margin-bottom: 25px;
+        }
+
+        .question {
+            background: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            box-shadow: 0 3px 8px #d0dff5;
+        }
+
+        h2, h3 {
+            color: #164b9b;
+        }
+
+        button {
+            background: #164b9b;
+            color: white;
+            padding: 10px 18px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #0b3270;
+        }
+
+        .answer {
+            display: none;
+            margin-top: 15px;
+        }
+
+        pre {
+            background: #eaf1fc;
+            padding: 15px;
+            border-radius: 8px;
+            overflow-x: auto;
+        }
+
+        footer {
+            background: #164b9b;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Operators in C</h1>
+    <p>BCA First Year | C Programming</p>
+</header>
+
+<div class="nav">
+    <a href="index.html">🏠 Home</a>
+    <a href="basic.html">← Previous Topic</a>
+    <a href="decision.html">Next Topic →</a>
+</div>
+
+<div class="container">
+
+    <h2>Operators Programs</h2>
+    <p>Practice arithmetic, increment, decrement and other operators.</p>
+
+    <input type="text" class="search" id="search"
+    placeholder="Search questions..." onkeyup="searchQuestions()">
+
+    <!-- Q1 -->
+    <div class="question">
+        <h3>Q1. Demonstrate pre-increment and post-increment operators.</h3>
+        <button onclick="showAnswer(this)">Show Answer</button>
+        <div class="answer">
+            <pre><code>#include &lt;stdio.h&gt;
+
+int main() {
+    int a = 5;
+
+    printf("Post-increment = %d\\n", a++);
+    printf("Pre-increment = %d", ++a);
+
+    return 0;
+}</code></pre>
+            <p><b>Output:</b></p>
+            <pre>Post-increment = 5
+Pre-increment = 7</pre>
+        </div>
+    </div>
+
+    <!-- Q2 -->
+    <div class="question">
+        <h3>Q2. Demonstrate pre-decrement and post-decrement operators.</h3>
+        <button onclick="showAnswer(this)">Show Answer</button>
+        <div class="answer">
+            <pre><code>#include &lt;stdio.h&gt;
+
+int main() {
+    int a = 5;
+
+    printf("Post-decrement = %d\\n", a--);
+    printf("Pre-decrement = %d", --a);
+
+    return 0;
+}</code></pre>
+            <p><b>Output:</b></p>
+            <pre>Post-decrement = 5
+Pre-decrement = 3</pre>
+        </div>
+    </div>
+
+    <!-- Q3 -->
+    <div class="question">
+        <h3>Q3. Perform addition, subtraction, multiplication and division of two numbers.</h3>
+        <button onclick="showAnswer(this)">Show Answer</button>
+        <div class="answer">
+            <pre><code>#include &lt;stdio.h&gt;
+
+int main() {
+    int a, b;
+
+    printf("Enter two numbers: ");
+    scanf("%d%d", &amp;a, &amp;b);
+
+    printf("Addition = %d\\n", a+b);
+    printf("Subtraction = %d\\n", a-b);
+    printf("Multiplication = %d\\n", a*b);
+
+    if(b!=0)
+        printf("Division = %.2f", (float)a/b);
+    else
+        printf("Division is not possible");
+
+    return 0;
+}</code></pre>
+            <p><b>Input:</b> 10 2</p>
+            <p><b>Output:</b></p>
+            <pre>Addition = 12
+Subtraction = 8
+Multiplication = 20
+Division = 5.00</pre>
+        </div>
+    </div>
+
+    <!-- Q4 -->
+    <div class="question">
+        <h3>Q4. Find the last digit of a number.</h3>
+        <button onclick="showAnswer(this)">Show Answer</button>
+        <div class="answer">
+            <pre><code>#include &lt;stdio.h&gt;
+
+int main() {
+    int n;
+
+    printf("Enter a number: ");
+    scanf("%d", &amp;n);
+
+    printf("Last digit = %d", n%10);
+
+    return 0;
+}</code></pre>
+            <p><b>Input:</b> 456</p>
+            <p><b>Output:</b> Last digit = 6</p>
+        </div>
+    </div>
+
+    <!-- Q5 -->
+    <div class="question">
+        <h3>Q5. Find the first digit after the decimal point of a positive number.</h3>
+        <button onclick="showAnswer(this)">Show Answer</button>
+        <div class="answer">
+            <pre><code>#include &lt;stdio.h&gt;
+
+int main() {
+    float n;
+    int digit;
+
+    printf("Enter a positive decimal number: ");
+    scanf("%f", &amp;n);
+
+    digit = (int)(n*10)%10;
+
+    printf("First decimal digit = %d", digit);
+
+    return 0;
+}</code></pre>
+            <p><b>Input:</b> 12.56</p>
+            <p><b>Output:</b> First decimal digit = 5</p>
+        </div>
+    </div>
+
+    <!-- Q6 -->
+    <div class="question">
+        <h3>Q6. Find the cube of a number.</h3>
+        <button onclick="showAnswer(this)">Show Answer</button>
+        <div class="answer">
+            <pre><code>#include &lt;stdio.h&gt;
+
+int main() {
+    int n;
+
+    printf("Enter a number: ");
+    scanf("%d", &amp;n);
+
+    printf("Cube = %d", n*n*n);
+
+    return 0;
+}</code></pre>
+            <p><b>Input:</b> 3</p>
+            <p><b>Output:</b> Cube = 27</p>
+        </div>
+    </div>
+
+    <!-- Q7 -->
+    <div class="question">
+        <h3>Q7. Round a decimal number to the nearest integer.</h3>
+        <button onclick="showAnswer(this)">Show Answer</button>
+        <div class="answer">
+            <pre><code>#include &lt;stdio.h&gt;
+
+int main() {
+    float n;
+
+    printf("Enter a decimal number: ");
+    scanf("%f", &amp;n);
+
+    printf("Rounded value = %.0f", n);
+
+    return 0;
+}</code></pre>
+            <p><b>Input:</b> 12.6</p>
+            <p><b>Output:</b> Rounded value = 13</p>
+        </div>
+    </div>
+
+    <!-- Q8 -->
+    <div class="question">
+        <h3>Q8. Convert a lowercase character into uppercase.</h3>
+        <button onclick="showAnswer(this)">Show Answer</button>
+        <div class="answer">
+            <pre><code>#include &lt;stdio.h&gt;
+#include &lt;ctype.h&gt;
+
+int main() {
+    char ch;
+
+    printf("Enter a lowercase character: ");
+    scanf("%c", &amp;ch);
+
+    printf("Uppercase = %c", toupper((unsigned char)ch));
+
+    return 0;
+}</code></pre>
+            <p><b>Input:</b> a</p>
+            <p><b>Output:</b> Uppercase = A</p>
+        </div>
+    </div>
+
+    <!-- Q9 -->
+    <div class="question">
+        <h3>Q9. Calculate the total and average marks of five subjects.</h3>
+        <button onclick="showAnswer(this)">Show Answer</button>
+        <div class="answer">
+            <pre><code>#include &lt;stdio.h&gt;
+
+int main() {
+    int a, b, c, d, e, total;
+    float average;
+
+    printf("Enter five subject marks: ");
+    scanf("%d%d%d%d%d", &amp;a, &amp;b, &amp;c, &amp;d, &amp;e);
+
+    total = a+b+c+d+e;
+    average = total/5.0;
+
+    printf("Total = %d\\n", total);
+    printf("Average = %.2f", average);
+
+    return 0;
+}</code></pre>
+            <p><b>Input:</b> 80 70 90 85 75</p>
+            <p><b>Output:</b></p>
+            <pre>Total = 400
+Average = 80.00</pre>
+        </div>
+    </div>
+
+    <!-- Q10 -->
+    <div class="question">
+        <h3>Q10. Calculate Simple Interest.</h3>
+        <button onclick="showAnswer(this)">Show Answer</button>
+        <div class="answer">
+            <pre><code>#include &lt;stdio.h&gt;
+
+int main() {
+    float p, r, t, si;
+
+    printf("Enter principal, rate and time: ");
+    scanf("%f%f%f", &amp;p, &amp;r, &amp;t);
+
+    si = (p*r*t)/100;
+
+    printf("Simple Interest = %.2f", si);
+
+    return 0;
+}</code></pre>
+            <p><b>Input:</b> 1000 5 2</p>
+            <p><b>Output:</b> Simple Interest = 100.00</p>
+        </div>
+    </div>
+
+</div>
+
+<footer>
+    <p>© 2026 C Programming | BCA-1 Student Project</p>
+</footer>
+
+<script>
+    function showAnswer(button) {
+        let answer = button.nextElementSibling;
+
+        if (answer.style.display === "block") {
+            answer.style.display = "none";
+            button.innerText = "Show Answer";
+        } else {
+            answer.style.display = "block";
+            button.innerText = "Hide Answer";
+        }
+    }
+
+    function searchQuestions() {
+        let input = document.getElementById("search").value.toLowerCase();
+        let questions = document.getElementsByClassName("question");
+
+        for (let i = 0; i < questions.length; i++) {
+            let text = questions[i].innerText.toLowerCase();
+
+            if (text.includes(input)) {
+                questions[i].style.display = "block";
+            } else {
+                questions[i].style.display = "none";
+            }
+        }
+    }
+</script>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Decision Control - C Programming</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f0f6ff;
+            color: #183153;
+            margin: 0;
+        }
+
+        header {
+            background: #164b9b;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        .nav {
+            background: white;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .nav a {
+            color: #164b9b;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 10px;
+        }
+
+        .container {
+            width: 90%;
+            margin: 25px auto;
+        }
+
+        .search {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #aac5e8;
+            border-radius: 8px;
+            font-size: 16px;
+            box-sizing: border-box;
+            margin-bottom: 25px;
+        }
+
+        .question {
+            background: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            box-shadow: 0 3px 8px #d0dff5;
+        }
+
+        h2, h3 {
+            color: #164b9b;
+        }
+
+        button {
+            background: #164b9b;
+            color: white;
+            padding: 10px 18px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #0b3270;
+        }
+
+        .answer {
+            display: none;
+            margin-top: 15px;
+        }
+
+        pre {
+            background: #eaf1fc;
+            padding: 15px;
+            border-radius: 8px;
+            overflow-x: auto;
+        }
+
+        footer {
+            background: #164b9b;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Decision Control Structure</h1>
+    <p>BCA First Year | C Programming</p>
+</header>
+
+<div class="nav">
+    <a href="index.html">🏠 Home</a>
+    <a href="operators.html">← Previous Topic</a>
+    <a href="loops.html">Next Topic →</a>
+</div>
+
+<div class="container">
+
+    <h2>Decision Control Programs</h2>
+    <p>Practice if, if-else, nested if and else-if statements.</p>
+
+    <input type="text" class="search" id="search"
+    placeholder="Search questions..." onkeyup="searchQuestions()">
+
+    <!-- Q1 -->
+    <div class="question">
+        <h3>Q1. Check whether a number is positive, negative or zero.</h3>
+        <button onclick="showAnswer(this)">Show Answer</button>
+        <div class="answer">
+            <pre><code>#include &lt;stdio.h&gt;
+
+int main() {
+    int n;
+
+    printf("Enter a number: ");
+    scanf("%d", &amp;n);
+
+    if(n>0)
+        printf("Positive number");
+    else if(n<0)
+        printf("Negative number");
+    else
+        printf("Zero");
+
+    return 0;
+}</code></pre>
+            <p><b>Input:</b> -5</p>
+            <p><b>Output:</b> Negative number</p>
+        </div>
+    </div>
+
+    <!-- Q2 -->
+    <div class="question">
+        <h3>Q2. Check whether a number is even or odd.</h3>
+        <button onclick="showAnswer(this)">Show Answer</button>
+        <div class="answer">
+            <pre><code>#include &lt;stdio.h&gt;
+
+int main() {
+    int n;
+
+    printf("Enter a number: ");
+    scanf("%d", &amp;n);
+
+    if(n%2==0)
+        printf("Even number");
+    else
+        printf("Odd number");
+
+    return 0;
+}</code></pre>
+            <p><b>Input:</b> 7</p>
+            <p><b>Output:</b> Odd number</p>
+        </div>
+    </div>
+
+    <!-- Q3 -->
+    <div class="question">
+        <h3>Q3. Check whether a number contains 1, 2, 3, 4 or 5 digits.</h3>
+        <button onclick="showAnswer(this)">Show Answer</button>
+        <div class="answer">
+            <pre><code>#include &lt;stdio.h&gt;
+
+int main() {
+    int n;
+
+    printf("Enter a number: ");
+    scanf("%d", &amp;n);
+
+    if(n<0)
+        n=-n;
+
+    if(n<10)
+        printf("1 digit");
+    else if(n<100)
+        printf("2 digits");
+    else if(n<1000)
+        printf("3 digits");
+    else if(n<10000)
+        printf("4 digits");
+    else if(n<100000)
+        printf("5 digits");
+    else
+        printf("More than 5 digits");
+
+    return 0;
+}</code></pre>
+            <p><b>Input:</b> 1234</p>
+            <p><b>Output:</b> 4 digits</p>
+        </div>
+    </div>
+
+    <!-- Q4 -->
+    <div class="question">
+        <h3>Q4. Display grade according to marks (90+ A, 75+ B, 60+ C, otherwise D).</h3>
+        <button onclick="showAnswer(this)">Show Answer</button>
+        <div class="answer">
+            <pre><code>#include &lt;stdio.h&gt;
+
+int main() {
+    int marks;
+
+    printf("Enter marks: ");
+    scanf("%d", &amp;marks);
+
+    if(marks>=90)
+        printf("Grade A");
+    else if(marks>=75)
+        printf("Grade B");
+    else if(marks>=60)
+        printf("Grade C");
+    else
+        printf("Grade D");
+
+    return 0;
+}</code></pre>
+            <p><b>Input:</b> 82</p>
+            <p><b>Output:</b> Grade B</p>
+        </div>
+    </div>
+
+    <!-- Q5 -->
+    <div class="question">
+        <h3>Q5. Check whether a number entered as text contains a decimal point.</h3>
+        <button onclick="showAnswer(this)">Show Answer</button>
+        <div class="answer">
+            <pre><code>#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+
+int main() {
+    char n[50];
+
+    printf("Enter a number: ");
+    scanf("%49s", n);
+
+    if(strchr(n, '.')!=NULL)
+        printf("Decimal number");
+    else
+        printf("Integer number");
+
+    return 0;
+}</code></pre>
+            <p><b>Input:</b> 12.50</p>
+            <p><b>Output:</b> Decimal number</p>
+        </div>
+    </div>
+
+    <!-- Q6 -->
+    <div class="question">
+        <h3>Q6. Change the sign of a number using if-else.</h3>
+        <button onclick="showAnswer(this)">Show Answer</button>
+        <div class="answer">
+            <pre><code>#include &lt;stdio.h&gt;
+
+int main() {
+    int n;
+
+    printf("Enter a number: ");
+    scanf("%d", &amp;n);
+
+    if(n>0)
+        n=-n;
+    else if(n<0)
+        n=-n;
+
+    printf("Result = %d", n);
+
+    return 0;
+}</code></pre>
+            <p><b>Input:</b> 10</p>
+            <p><b>Output:</b> Result = -10</p>
+        </div>
+    </div>
+
+    <!-- Q7 -->
+    <div class="question">
+        <h3>Q7. Check whether a character is an alphabet or not.</h3>
+        <button onclick="showAnswer(this)">Show Answer</button>
+        <div class="answer">
+            <pre><code>#include &lt;stdio.h&gt;
+#include &lt;ctype.h&gt;
+
+int main() {
+    char ch;
+
+    printf("Enter a character: ");
+    scanf("%c", &amp;ch);
+
+    if(isalpha((unsigned char)ch))
+        printf("Alphabet");
+    else
+        printf("Not an alphabet");
+
+    return 0;
+}</code></pre>
+            <p><b>Input:</b> A</p>
+            <p><b>Output:</b> Alphabet</p>
+        </div>
+    </div>
+
+    <!-- Q8 -->
+    <div class="question">
+        <h3>Q8. If a number is negative, print its square; otherwise add 20 to it.</h3>
+        <button onclick="showAnswer(this)">Show Answer</button>
+        <div class="answer">
+            <pre><code>#include &lt;stdio.h&gt;
+
+int main() {
+    int n;
+
+    printf("Enter a number: ");
+    scanf("%d", &amp;n);
+
+    if(n<0)
+        printf("Square = %d", n*n);
+    else
+        printf("Result = %d", n+20);
+
+    return 0;
+}</code></pre>
+            <p><b>Input:</b> -4</p>
+            <p><b>Output:</b> Square = 16</p>
+        </div>
+    </div>
+
+    <!-- Q9 -->
+    <div class="question">
+        <h3>Q9. Find the greater of two numbers.</h3>
+        <button onclick="showAnswer(this)">Show Answer</button>
+        <div class="answer">
+            <pre><code>#include &lt;stdio.h&gt;
+
+int main() {
+    int a, b;
+
+    printf("Enter two numbers: ");
+    scanf("%d%d", &amp;a, &amp;b);
+
+    if(a>b)
+        printf("Greater = %d", a);
+    else if(b>a)
+        printf("Greater = %d", b);
+    else
+        printf("Both are equal");
+
+    return 0;
+}</code></pre>
+            <p><b>Input:</b> 10 20</p>
+            <p><b>Output:</b> Greater = 20</p>
+        </div>
+    </div>
+
+    <!-- Q10 -->
+    <div class="question">
+        <h3>Q10. Check whether a number is divisible by 4.</h3>
+        <button onclick="showAnswer(this)">Show Answer</button>
+        <div class="answer">
+            <pre><code>#include &lt;stdio.h&gt;
+
+int main() {
+    int n;
+
+    printf("Enter a number: ");
+    scanf("%d", &amp;n);
+
+    if(n%4==0)
+        printf("Divisible by 4");
+    else
+        printf("Not divisible by 4");
+
+    return 0;
+}</code></pre>
+            <p><b>Input:</b> 16</p>
+            <p><b>Output:</b> Divisible by 4</p>
+        </div>
+    </div>
+
+    <!-- Q11 -->
+    <div class="question">
+        <h3>Q11. Check whether four entered characters are the same.</h3>
+        <button onclick="showAnswer(this)">Show Answer</button>
+        <div class="answer">
+            <pre><code>#include &lt;stdio.h&gt;
+
+int main() {
+    char a, b, c, d;
+
+    printf("Enter four characters: ");
+    scanf(" %c %c %c %c", &amp;a, &amp;b, &amp;c, &amp;d);
+
+    if(a==b && b==c && c==d)
+        printf("All characters are same");
+    else
+        printf("Characters are different");
+
+    return 0;
+}</code></pre>
+            <p><b>Input:</b> A A A A</p>
+            <p><b>Output:</b> All characters are same</p>
+        </div>
+    </div>
+
+    <!-- Q12 -->
+    <div class="question">
+        <h3>Q12. Find the greatest among three numbers.</h3>
+        <button onclick="showAnswer(this)">Show Answer</button>
+        <div class="answer">
+            <pre><code>#include &lt;stdio.h&gt;
+
+int main() {
+    int a, b, c;
+
+    printf("Enter three numbers: ");
+    scanf("%d%d%d", &amp;a, &amp;b, &amp;c);
+
+    if(a>=b && a>=c)
+        printf("Greatest = %d", a);
+    else if(b>=a && b>=c)
+        printf("Greatest = %d", b);
+    else
+        printf("Greatest = %d", c);
+
+    return 0;
+}</code></pre>
+            <p><b>Input:</b> 10 25 15</p>
+            <p><b>Output:</b> Greatest = 25</p>
+        </div>
+    </div>
+
+    <!-- Q13 -->
+    <div class="question">
+        <h3>Q13. Display the number of days in a month (February is considered 28 days).</h3>
+        <button onclick="showAnswer(this)">Show Answer</button>
+        <div class="answer">
+            <pre><code>#include &lt;stdio.h&gt;
+
+int main() {
+    int month;
+
+    printf("Enter month number (1-12): ");
+    scanf("%d", &amp;month);
+
+    if(month==4 || month==6 || month==9 || month==11)
+        printf("30 days");
+    else if(month==2)
+        printf("28 days");
+    else if(month>=1 && month<=12)
+        printf("31 days");
+    else
+        printf("Invalid month");
+
+    return 0;
+}</code></pre>
+            <p><b>Input:</b> 4</p>
+            <p><b>Output:</b> 30 days</p>
+        </div>
+    </div>
+
+    <!-- Q14 -->
+    <div class="question">
+        <h3>Q14. Convert a single digit (0–9) into its word.</h3>
+        <button onclick="showAnswer(this)">Show Answer</button>
+        <div class="answer">
+            <pre><code>#include &lt;stdio.h&gt;
+
+int main() {
+    int n;
+
+    printf("Enter a digit (0-9): ");
+    scanf("%d", &amp;n);
+
+    switch(n) {
+        case 0: printf("Zero"); break;
+        case 1: printf("One"); break;
+        case 2: printf("Two"); break;
+        case 3: printf("Three"); break;
+        case 4: printf("Four"); break;
+        case 5: printf("Five"); break;
+        case 6: printf("Six"); break;
+        case 7: printf("Seven"); break;
+        case 8: printf("Eight"); break;
+        case 9: printf("Nine"); break;
+        default: printf("Invalid digit");
+    }
+
+    return 0;
+}</code></pre>
+            <p><b>Input:</b> 5</p>
+            <p><b>Output:</b> Five</p>
+        </div>
+    </div>
+
+    <!-- Q15 -->
+    <div class="question">
+        <h3>Q15. Find the difference between the ASCII values of two characters.</h3>
+        <button onclick="showAnswer(this)">Show Answer</button>
+        <div class="answer">
+            <pre><code>#include &lt;stdio.h&gt;
+
+int main() {
+    char a, b;
+
+    printf("Enter two characters: ");
+    scanf(" %c %c", &amp;a, &amp;b);
+
+    printf("Difference = %d", a-b);
+
+    return 0;
+}</code></pre>
+            <p><b>Input:</b> B A</p>
+            <p><b>Output:</b> Difference = 1</p>
+        </div>
+    </div>
+
+    <!-- Q16 -->
+    <div class="question">
+        <h3>Q16. Convert a two-digit number into words (digit by digit).</h3>
+        <button onclick="showAnswer(this)">Show Answer</button>
+        <div class="answer">
+            <pre><code>#include &lt;stdio.h&gt;
+
+int main() {
+    int n, a, b;
+
+    printf("Enter a two-digit number: ");
+    scanf("%d", &amp;n);
+
+    if(n<10 || n>99) {
+        printf("Invalid number");
+        return 0;
+    }
+
+    a=n/10;
+    b=n%10;
+
+    switch(a) {
+        case 1: printf("One "); break;
+        case 2: printf("Two "); break;
+        case 3: printf("Three "); break;
+        case 4: printf("Four "); break;
+        case 5: printf("Five "); break;
+        case 6: printf("Six "); break;
+        case 7: printf("Seven "); break;
+        case 8: printf("Eight "); break;
+        case 9: printf("Nine "); break;
+    }
+
+    switch(b) {
+        case 0: printf("Zero"); break;
+        case 1: printf("One"); break;
+        case 2: printf("Two"); break;
+        case 3: printf("Three"); break;
+        case 4: printf("Four"); break;
+        case 5: printf("Five"); break;
+        case 6: printf("Six"); break;
+        case 7: printf("Seven"); break;
+        case 8: printf("Eight"); break;
+        case 9: printf("Nine"); break;
+    }
+
+    return 0;
+}</code></pre>
+            <p><b>Input:</b> 25</p>
+            <p><b>Output:</b> Two Five</p>
+        </div>
+    </div>
+
+    <!-- Q17 -->
+    <div class="question">
+        <h3>Q17. Check whether a character is uppercase, lowercase, a digit or special character.</h3>
+        <button onclick="showAnswer(this)">Show Answer</button>
+        <div class="answer">
+            <pre><code>#include &lt;stdio.h&gt;
+#include &lt;ctype.h&gt;
+
+int main() {
+    char ch;
+
+    printf("Enter a character: ");
+    scanf("%c", &amp;ch);
+
+    if(isupper((unsigned char)ch))
+        printf("Uppercase letter");
+    else if(islower((unsigned char)ch))
+        printf("Lowercase letter");
+    else if(isdigit((unsigned char)ch))
+        printf("Digit");
+    else
+        printf("Special character");
+
+    return 0;
+}</code></pre>
+            <p><b>Input:</b> 7</p>
+            <p><b>Output:</b> Digit</p>
+        </div>
+    </div>
+
+    <!-- Q18 -->
+    <div class="question">
+        <h3>Q18. Check whether a year is a leap year.</h3>
+        <button onclick="showAnswer(this)">Show Answer</button>
+        <div class="answer">
+            <pre><code>#include &lt;stdio.h&gt;
+
+int main() {
+    int year;
+
+    printf("Enter a year: ");
+    scanf("%d", &amp;year);
+
+    if(year%400==0 || (year%4==0 && year%100!=0))
+        printf("Leap year");
+    else
+        printf("Not a leap year");
+
+    return 0;
+}</code></pre>
+            <p><b>Input:</b> 2024</p>
+            <p><b>Output:</b> Leap year</p>
+        </div>
+    </div>
+
+    <!-- Q19 -->
+    <div class="question">
+        <h3>Q19. Check whether a date is valid (DD MM YYYY).</h3>
+        <button onclick="showAnswer(this)">Show Answer</button>
+        <div class="answer">
+            <pre><code>#include &lt;stdio.h&gt;
+
+int main() {
+    int d, m, y, days;
+
+    printf("Enter day month year: ");
+    scanf("%d%d%d", &amp;d, &amp;m, &amp;y);
+
+    if(m<1 || m>12 || y<1) {
+        printf("Invalid date");
+        return 0;
+    }
+
+    if(m==2) {
+        if(y%400==0 || (y%4==0 && y%100!=0))
+            days=29;
+        else
+            days=28;
+    }
+    else if(m==4 || m==6 || m==9 || m==11)
+        days=30;
+    else
+        days=31;
+
+    if(d>=1 && d<=days)
+        printf("Valid date");
+    else
+        printf("Invalid date");
+
+    return 0;
+}</code></pre>
+            <p><b>Input:</b> 29 2 2024</p>
+            <p><b>Output:</b> Valid date</p>
+        </div>
+    </div>
+
+    <!-- Q20 -->
+    <div class="question">
+        <h3>Q20. Calculate age using birth date and current date (DD MM YYYY).</h3>
+        <button onclick="showAnswer(this)">Show Answer</button>
+        <div class="answer">
+            <pre><code>#include &lt;stdio.h&gt;
+
+int main() {
+    int d1, m1, y1, d2, m2, y2;
+    int d, m, y;
+
+    printf("Enter birth date (DD MM YYYY): ");
+    scanf("%d%d%d", &amp;d1, &amp;m1, &amp;y1);
+
+    printf("Enter current date (DD MM YYYY): ");
+    scanf("%d%d%d", &amp;d2, &amp;m2, &amp;y2);
+
+    d=d2-d1;
+    m=m2-m1;
+    y=y2-y1;
+
+    if(d<0) {
+        d+=30;
+        m--;
+    }
+
+    if(m<0) {
+        m+=12;
+        y--;
+    }
+
+    printf("Age = %d years, %d months, %d days",
+           y, m, d);
+
+    return 0;
+}</code></pre>
+            <p><b>Input:</b><br>15 5 2005<br>1 11 2026</p>
+            <p><b>Output:</b> Age = 21 years, 5 months, 16 days</p>
+            <p><b>Note:</b> This beginner example assumes 30 days per month.</p>
+        </div>
+    </div>
+
+    <!-- Q21 -->
+    <div class="question">
+        <h3>Q21. Calculate the area and perimeter of a rectangle.</h3>
+        <button onclick="showAnswer(this)">Show Answer</button>
+        <div class="answer">
+            <pre><code>#include &lt;stdio.h&gt;
+
+int main() {
+    float length, breadth, area, perimeter;
+
+    printf("Enter length and breadth: ");
+    scanf("%f%f", &amp;length, &amp;breadth);
+
+    area=length*breadth;
+    perimeter=2*(length+breadth);
+
+    printf("Area = %.2f\\n", area);
+    printf("Perimeter = %.2f", perimeter);
+
+    return 0;
+}</code></pre>
+            <p><b>Input:</b> 5 3</p>
+            <p><b>Output:</b></p>
+            <pre>Area = 15.00
+Perimeter = 16.00</pre>
+        </div>
+    </div>
+
+</div>
+
+<footer>
+    <p>© 2026 C Programming | BCA-1 Student Project</p>
+</footer>
+
+<script>
+    function showAnswer(button) {
+        let answer = button.nextElementSibling;
+
+        if (answer.style.display === "block") {
+            answer.style.display = "none";
+            button.innerText = "Show Answer";
+        } else {
+            answer.style.display = "block";
+            button.innerText = "Hide Answer";
+        }
+    }
+
+    function searchQuestions() {
+        let input = document.getElementById("search").value.toLowerCase();
+        let questions = document.getElementsByClassName("question");
+
+        for (let i = 0; i < questions.length; i++) {
+            let text = questions[i].innerText.toLowerCase();
+
+            if (text.includes(input)) {
+                questions[i].style.display = "block";
+            } else {
+                questions[i].style.display = "none";
+            }
+        }
+    }
+</script>
+
+</body>
+</html><!DOCTYPE html>
+<html>
+<head>
+    <title>Loops - C Programming</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f0f6ff;
+            color: #183153;
+            margin: 0;
+        }
+
+        header {
+            background: #164b9b;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        .nav {
+            background: white;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .nav a {
+            color: #164b9b;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 10px;
+        }
+
+        .container {
+            width: 90%;
+            margin: 25px auto;
+        }
+
+        .search {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #aac5e8;
+            border-radius: 8px;
+            font-size: 16px;
+            box-sizing: border-box;
+            margin-bottom: 25px;
+        }
+
+        .question {
+            background: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            box-shadow: 0 3px 8px #d0dff5;
+        }
+
+        h2, h3 {
+            color: #164b9b;
+        }
+
+        button {
+            background: #164b9b;
+            color: white;
+            padding: 10px 18px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #0b3270;
+        }
+
+        .answer {
+            display: none;
+            margin-top: 15px;
+        }
+
+        pre {
+            background: #eaf1fc;
+            padding: 15px;
+            border-radius: 8px;
+            overflow-x: auto;
+        }
+
+        footer {
+            background: #164b9b;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Loop Control Structure</h1>
+    <p>BCA First Year | C Programming</p>
+</header>
+
+<div class="nav">
+    <a href="index.html">🏠 Home</a>
+    <a href="decision.html">← Previous Topic</a>
+    <a href="arrays.html">Next Topic →</a>
+</div>
+
+<div class="container">
+
+    <h2>Loops Programs</h2>
+    <p>Practice for, while and do-while loops.</p>
+
+    <input type="text" class="search" id="search"
+    placeholder="Search questions..." onkeyup="searchQuestions()">
+
+    <!-- Q1 -->
+    <div class="question">
+        <h3>Q1. Convert a decimal number into binary.</h3>
+        <button onclick="showAnswer(this)">Show Answer</button>
+        <div class="answer">
+            <pre><code>#include &lt;stdio.h&gt;
+
+int main() {
+    int n, binary=0, place=1;
+
+    printf("Enter a decimal number: ");
+    scanf("%d", &amp;n);
+
+    while(n>0) {
+        binary += (n%2)*place;
+        n /= 2;
+        place *= 10;
+    }
+
+    printf("Binary = %d", binary);
+
+    return 0;
+}</code></pre>
+            <p><b>Input:</b> 10</p>
+            <p><b>Output:</b> Binary = 1010</p>
+        </div>
+    </div>
+
+    <!-- Q2 -->
+    <div class="question">
+        <h3>Q2. Find the prime divisors of a number.</h3>
+        <button onclick="showAnswer(this)">Show Answer</button>
+        <div class="answer">
+            <pre><code>#include &lt;stdio.h&gt;
+
+int main() {
+    int n, i;
+
+    printf("Enter a number: ");
+    scanf("%d", &amp;n);
+
+    printf("Prime divisors: ");
+
+    for(i=2; i<=n; i++) {
+        if(n%i==0) {
+            int j, prime=1;
+
+            for(j=2; j*j<=i; j++) {
+                if(i%j==0) {
+                    prime=0;
+                    break;
+                }
+            }
+
+            if(prime)
+                printf("%d ", i);
+        }
+    }
+
+    return 0;
+}</code></pre>
+            <p><b>Input:</b> 12</p>
+            <p><b>Output:</b> Prime divisors: 2 3</p>
+        </div>
+    </div>
+
+    <!-- Q3 -->
+    <div class="question">
+        <h3>Q3. Check whether a number is prime or not.</h3>
+        <button onclick="showAnswer(this)">Show Answer</button>
+        <div class="answer">
+            <pre><code>#include &lt;stdio.h&gt;
+
+int main() {
+    int n, i, prime=1;
+
+    printf("Enter a number: ");
+    scanf("%d", &amp;n);
+
+    if(n<2)
+        prime=0;
+
+    for(i=2; i*i<=n; i++) {
+        if(n%i==0) {
+            prime=0;
+            break;
+        }
+    }
+
+    if(prime)
+        printf("Prime number");
+    else
+        printf("Not a prime number");
+
+    return 0;
+}</code></pre>
+            <p><b>Input:</b> 7</p>
+            <p><b>Output:</b> Prime number</p>
+        </div>
+    </div>
+
+    <!-- Q4 -->
+    <div class="question">
+        <h3>Q4. Print each digit of a number on a separate line (from right to left).</h3>
+        <button onclick="showAnswer(this)">Show Answer</button>
+        <div class="answer">
+            <pre><code>#include &lt;stdio.h&gt;
+
+int main() {
+    int n;
+
+    printf("Enter a number: ");
+    scanf("%d", &amp;n);
+
+    if(n<0)
+        n=-n;
+
+    while(n>0) {
+        printf("%d\\n", n%10);
+        n/=10;
+    }
+
+    return 0;
+}</code></pre>
+            <p><b>Input:</b> 123</p>
+            <p><b>Output:</b></p>
+            <pre>3
+2
+1</pre>
+        </div>
+    </div>
+
+    <!-- Q5 -->
+    <div class="question">
+        <h3>Q5. Print your name 100 times.</h3>
+        <button onclick="showAnswer(this)">Show Answer</button>
+        <div class="answer">
+            <pre><code>#include &lt;stdio.h&gt;
+
+int main() {
+    int i;
+
+    for(i=1; i<=100; i++)
+        printf("My Name\\n");
+
+    return 0;
+}</code></pre>
+            <p><b>Output:</b> Prints My Name 100 times.</p>
+        </div>
+    </div>
+
+    <!-- Q6 -->
+    <div class="question">
+        <h3>Q6. Print numbers from 1 to 100000.</h3>
+        <button onclick="showAnswer(this)">Show Answer</button>
+        <div class="answer">
+            <pre><code>#include &lt;stdio.h&gt;
+
+int main() {
+    int i;
+
+    for(i=1; i<=100000; i++)
+        printf("%d\\n", i);
+
+    return 0;
+}</code></pre>
+            <p><b>Output:</b> Prints numbers from 1 to 100000.</p>
+            <p><b>Note:</b> This produces a very large output.</p>
+        </div>
+    </div>
+
+    <!-- Q7 -->
+    <div class="question">
+        <h3>Q7. Print numbers from 1 to n.</h3>
+        <button onclick="showAnswer(this)">Show Answer</button>
+        <div class="answer">
+            <pre><code>#include &lt;stdio.h&gt;
+
+int main() {
+    int n, i;
+
+    printf("Enter n: ");
+    scanf("%d", &amp;n);
+
+    for(i=1; i<=n; i++)
+        printf("%d ", i);
+
+    return 0;
+}</code></pre>
+            <p><b>Input:</b> 5</p>
+            <p><b>Output:</b> 1 2 3 4 5</p>
+        </div>
+    </div>
+
+    <!-- Q8 -->
+    <div class="question">
+        <h3>Q8. Print a user-entered number 100 times.</h3>
+        <button onclick="showAnswer(this)">Show Answer</button>
+        <div class="answer">
+            <pre><code>#include &lt;stdio.h&gt;
+
+int main() {
+    int n, i;
+
+    printf("Enter a number: ");
+    scanf("%d", &amp;n);
+
+    for(i=1; i<=100; i++)
+        printf("%d\\n", n);
+
+    return 0;
+}</code></pre>
+            <p><b>Input:</b> 7</p>
+            <p><b>Output:</b> Prints 7 one hundred times.</p>
+        </div>
+    </div>
+
+    <!-- Q9 -->
+    <div class="question">
+        <h3>Q9. Print odd numbers from 1 to 100.</h3>
+        <button onclick="showAnswer(this)">Show Answer</button>
+        <div class="answer">
+            <pre><code>#include &lt;stdio.h&gt;
+
+int main() {
+    int i;
+
+    for(i=1; i<=100; i+=2)
+        printf("%d ", i);
+
+    return 0;
+}</code></pre>
+            <p><b>Output:</b> 1 3 5 7 ... 99</p>
+        </div>
+    </div>
+
+    <!-- Q10 -->
+    <div class="question">
+        <h3>Q10. Print multiplication tables from 4 to 20.</h3>
+        <button onclick="showAnswer(this)">Show Answer</button>
+        <div class="answer">
+            <pre><code>#include &lt;stdio.h&gt;
+
+int main() {
+    int i, j;
+
+    for(i=4; i<=20; i++) {
+        printf("\\nTable of %d\\n", i);
+
+        for(j=1; j<=10; j++)
+            printf("%d x %d = %d\\n", i, j, i*j);
+    }
+
+    return 0;
+}</code></pre>
+            <p><b>Output:</b> Displays tables from 4 to 20.</p>
+        </div>
+    </div>
+
+    <!-- Q11 -->
+    <div class="question">
+        <h3>Q11. Reverse an integer number.</h3>
+        <button onclick="showAnswer(this)">Show Answer</button>
+        <div class="answer">
+            <pre><code>#include &lt;stdio.h&gt;
+
+int main() {
+    int n, rev=0;
+
+    printf("Enter a number: ");
+    scanf("%d", &amp;n);
+
+    while(n!=0) {
+        rev=rev*10+n%10;
+        n/=10;
+    }
+
+    printf("Reverse = %d", rev);
+
+    return 0;
+}</code></pre>
+            <p><b>Input:</b> 1234</p>
+            <p><b>Output:</b> Reverse = 4321</p>
+        </div>
+    </div>
+
+    <!-- Q12 -->
+    <div class="question">
+        <h3>Q12. Create a menu-driven calculator using do-while and switch.</h3>
+        <button onclick="showAnswer(this)">Show Answer</button>
+        <div class="answer">
+            <pre><code>#include &lt;stdio.h&gt;
+
+int main() {
+    int choice;
+    float a, b;
+
+    do {
+        printf("\\n1. Add\\n2. Subtract\\n");
+        printf("3. Multiply\\n4. Divide\\n5. Exit\\n");
+        printf("Enter choice: ");
+        scanf("%d", &amp;choice);
+
+        if(choice>=1 && choice<=4) {
+            printf("Enter two numbers: ");
+            scanf("%f%f", &amp;a, &amp;b);
+        }
+
+        switch(choice) {
+            case 1: printf("Result = %.2f", a+b); break;
+            case 2: printf("Result = %.2f", a-b); break;
+            case 3: printf("Result = %.2f", a*b); break;
+            case 4:
+                if(b!=0)
+                    printf("Result = %.2f", a/b);
+                else
+                    printf("Cannot divide by zero");
+                break;
+            case 5: printf("Exiting..."); break;
+            default: printf("Invalid choice");
+        }
+
+    } while(choice!=5);
+
+    return 0;
+}</code></pre>
+            <p><b>Sample:</b> Choice 1, numbers 10 and 5</p>
+            <p><b>Output:</b> Result = 15.00</p>
+        </div>
+    </div>
+
+    <!-- Q13 -->
+    <div class="question">
+        <h3>Q13. Check whether a number is a palindrome.</h3>
+        <button onclick="showAnswer(this)">Show Answer</button>
+        <div class="answer">
+            <pre><code>#include &lt;stdio.h&gt;
+
+int main() {
+    int n, temp, rev=0;
+
+    printf("Enter a number: ");
+    scanf("%d", &amp;n);
+
+    temp=n;
+
+    while(n>0) {
+        rev=rev*10+n%10;
+        n/=10;
+    }
+
+    if(temp==rev)
+        printf("Palindrome");
+    else
+        printf("Not a palindrome");
+
+    return 0;
+}</code></pre>
+            <p><b>Input:</b> 121</p>
+            <p><b>Output:</b> Palindrome</p>
+        </div>
+    </div>
+
+    <!-- Q14 -->
+    <div class="question">
+        <h3>Q14. Calculate the power of a number using a loop.</h3>
+        <button onclick="showAnswer(this)">Show Answer</button>
+        <div class="answer">
+            <pre><code>#include &lt;stdio.h&gt;
+
+int main() {
+    int base, exp, i;
+    long long result=1;
+
+    printf("Enter base and exponent: ");
+    scanf("%d%d", &amp;base, &amp;exp);
+
+    if(exp<0) {
+        printf("Enter a non-negative exponent");
+        return 0;
+    }
+
+    for(i=1; i<=exp; i++)
+        result*=base;
+
+    printf("Result = %lld", result);
+
+    return 0;
+}</code></pre>
+            <p><b>Input:</b> 2 3</p>
+            <p><b>Output:</b> Result = 8</p>
+        </div>
+    </div>
+
+    <!-- Q15 -->
+    <div class="question">
+        <h3>Q15. Find the first digit of a number.</h3>
+        <button onclick="showAnswer(this)">Show Answer</button>
+        <div class="answer">
+            <pre><code>#include &lt;stdio.h&gt;
+
+int main() {
+    int n;
+
+    printf("Enter a number: ");
+    scanf("%d", &amp;n);
+
+    if(n<0)
+        n=-n;
+
+    while(n>=10)
+        n/=10;
+
+    printf("First digit = %d", n);
+
+    return 0;
+}</code></pre>
+            <p><b>Input:</b> 4567</p>
+            <p><b>Output:</b> First digit = 4</p>
+        </div>
+    </div>
+
+    <!-- Q16 -->
+    <div class="question">
+        <h3>Q16. Find the sum of numbers from 0 to n.</h3>
+        <button onclick="showAnswer(this)">Show Answer</button>
+        <div class="answer">
+            <pre><code>#include &lt;stdio.h&gt;
+
+int main() {
+    int n, i, sum=0;
+
+    printf("Enter n: ");
+    scanf("%d", &amp;n);
+
+    for(i=0; i<=n; i++)
+        sum+=i;
+
+    printf("Sum = %d", sum);
+
+    return 0;
+}</code></pre>
+            <p><b>Input:</b> 5</p>
+            <p><b>Output:</b> Sum = 15</p>
+        </div>
+    </div>
+
+    <!-- Q17 -->
+    <div class="question">
+        <h3>Q17. Find the factorial of a number (0 to 20).</h3>
+        <button onclick="showAnswer(this)">Show Answer</button>
+        <div class="answer">
+            <pre><code>#include &lt;stdio.h&gt;
+
+int main() {
+    int n, i;
+    unsigned long long fact=1;
+
+    printf("Enter a number (0-20): ");
+    scanf("%d", &amp;n);
+
+    if(n<0 || n>20) {
+        printf("Invalid input");
+        return 0;
+    }
+
+    for(i=1; i<=n; i++)
+        fact*=i;
+
+    printf("Factorial = %llu", fact);
+
+    return 0;
+}</code></pre>
+            <p><b>Input:</b> 5</p>
+            <p><b>Output:</b> Factorial = 120</p>
+        </div>
+    </div>
+
+    <!-- Q18 -->
+    <div class="question">
+        <h3>Q18. Print a range of numbers in ascending or descending order.</h3>
+        <button onclick="showAnswer(this)">Show Answer</button>
+        <div class="answer">
+            <pre><code>#include &lt;stdio.h&gt;
+
+int main() {
+    int a, b, i;
+
+    printf("Enter starting and ending numbers: ");
+    scanf("%d%d", &amp;a, &amp;b);
+
+    if(a<=b) {
+        for(i=a; i<=b; i++)
+            printf("%d ", i);
+    }
+    else {
+        for(i=a; i>=b; i--)
+            printf("%d ", i);
+    }
+
+    return 0;
+}</code></pre>
+            <p><b>Input:</b> 10 5</p>
+            <p><b>Output:</b> 10 9 8 7 6 5</p>
+        </div>
+    </div>
+
+    <!-- Q19 -->
+    <div class="question">
+        <h3>Q19. Enter a password and display stars after it is entered.</h3>
+        <button onclick="showAnswer(this)">Show Answer</button>
+        <div class="answer">
+            <pre><code>#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+
+int main() {
+    char password[21];
+    int i, len;
+
+    printf("Enter password (max 20 characters): ");
+    scanf("%20s", password);
+
+    len=strlen(password);
+
+    printf("Password entered: ");
+
+    for(i=0; i<len; i++)
+        printf("*");
+
+    return 0;
+}</code></pre>
+            <p><b>Input:</b> hello123</p>
+            <p><b>Output:</b> Password entered: ****</p>
+            <p><b>Note:</b> Standard C does not hide typing while entering the password.</p>
+        </div>
+    </div>
+
+    <!-- Q20 -->
+    <div class="question">
+        <h3>Q20. Print numbers from 1 to 100 with a one-second delay.</h3>
+        <button onclick="showAnswer(this)">Show Answer</button>
+        <div class="answer">
+            <pre><code>#include &lt;stdio.h&gt;
+#include &lt;time.h&gt;
+
+int main() {
+    int i;
+    time_t start;
+
+    for(i=1; i<=100; i++) {
+        printf("%d\\n", i);
+
+        start=time(NULL);
+
+        while(time(NULL)-start<1) {
+        }
+    }
+
+    return 0;
+}</code></pre>
+            <p><b>Output:</b> Prints numbers from 1 to 100 with a delay.</p>
+            <p><b>Note:</b> The delay depends on your system clock.</p>
+        </div>
+    </div>
+
+    <!-- Q21 -->
+    <div class="question">
+        <h3>Q21. Print the Fibonacci series up to 100.</h3>
+        <button onclick="showAnswer(this)">Show Answer</button>
+        <div class="answer">
+            <pre><code>#include &lt;stdio.h&gt;
+
+int main() {
+    int a=0, b=1, c;
+
+    printf("%d %d ", a, b);
+
+    while(1) {
+        c=a+b;
+
+        if(c>100)
+            break;
+
+        printf("%d ", c);
+
+        a=b;
+        b=c;
+    }
+
+    return 0;
+}</code></pre>
+            <p><b>Output:</b> 0 1 1 2 3 5 8 13 21 34 55 89</p>
+        </div>
+    </div>
+
+    <!-- Q22 -->
+    <div class="question">
+        <h3>Q22. Print all alphabets from A to Z using a loop.</h3>
+        <button onclick="showAnswer(this)">Show Answer</button>
+        <div class="answer">
+            <pre><code>#include &lt;stdio.h&gt;
+
+int main() {
+    char ch;
+
+    for(ch='A'; ch<='Z'; ch++)
+        printf("%c ", ch);
+
+    return 0;
+}</code></pre>
+            <p><b>Output:</b> A B C D ... Z</p>
+        </div>
+    </div>
+
+    <!-- Q23 -->
+    <div class="question">
+        <h3>Q23. Check whether a number is an Armstrong number.</h3>
+        <button onclick="showAnswer(this)">Show Answer</button>
+        <div class="answer">
+            <pre><code>#include &lt;stdio.h&gt;
+
+int main() {
+    int n, temp, digits=0, sum=0;
+    int rem, i, power;
+
+    printf("Enter a number: ");
+    scanf("%d", &amp;n);
+
+    if(n<0) {
+        printf("Not an Armstrong number");
+        return 0;
+    }
+
+    temp=n;
+
+    do {
+        digits++;
+        temp/=10;
+    } while(temp>0);
+
+    temp=n;
+
+    while(temp>0) {
+        rem=temp%10;
+        power=1;
+
+        for(i=1; i<=digits; i++)
+            power*=rem;
+
+        sum+=power;
+        temp/=10;
+    }
+
+    if(sum==n)
+        printf("Armstrong number");
+    else
+        printf("Not an Armstrong number");
+
+    return 0;
+}</code></pre>
+            <p><b>Input:</b> 153</p>
+            <p><b>Output:</b> Armstrong number</p>
+        </div>
+    </div>
+
+</div>
+
+<footer>
+    <p>© 2026 C Programming | BCA-1 Student Project</p>
+</footer>
+
+<script>
+    function showAnswer(button) {
+        let answer = button.nextElementSibling;
+
+        if (answer.style.display === "block") {
+            answer.style.display = "none";
+            button.innerText = "Show Answer";
+        } else {
+            answer.style.display = "block";
+            button.innerText = "Hide Answer";
+        }
+    }
+
+    function searchQuestions() {
+        let input = document.getElementById("search").value.toLowerCase();
+        let questions = document.getElementsByClassName("question");
+
+        for (let i = 0; i < questions.length; i++) {
+            let text = questions[i].innerText.toLowerCase();
+
+            if (text.includes(input)) {
+                questions[i].style.display = "block";
+            } else {
+                questions[i].style.display = "none";
+            }
+        }
+    }
+</script>
+
+</body>
+</html><!DOCTYPE html>
+<html>
+<head>
+    <title>Arrays - C Programming</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background: #f0f6ff;
+            margin: 0;
+        }
+
+        header {
+            background: #0755a5;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        nav {
+            background: #d5e8ff;
+            text-align: center;
+            padding: 12px;
+        }
+
+        nav a {
+            margin: 15px;
+            color: #0755a5;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .container {
+            width: 85%;
+            margin: 20px auto;
+        }
+
+        input {
+            width: 95%;
+            padding: 12px;
+            margin-bottom: 20px;
+        }
+
+        .question {
+            background: white;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 5px #ccc;
+        }
+
+        button {
+            background: #0755a5;
+            color: white;
+            padding: 8px 15px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .answer {
+            display: none;
+            margin-top: 15px;
+        }
+
+        pre {
+            background: #eaf2ff;
+            padding: 12px;
+            overflow-x: auto;
+        }
+
+        footer {
+            background: #0755a5;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>C Programming Website</h1>
+    <p>BCA - First Semester</p>
+</header>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="loops.html">Previous</a>
+    <a href="matrix.html">Next</a>
+</nav>
+
+<div class="container">
+
+    <h2>One-Dimensional Arrays</h2>
+    <p>Learn basic array programs in C language.</p>
+
+    <input type="text" id="search"
+    placeholder="Search array programs..."
+    onkeyup="searchQuestions()">
+
+    <!-- Q1 -->
+    <div class="question">
+        <h3>Q1. Input and display array elements.</h3>
+        <button onclick="showAnswer(this)">Show Answer</button>
+        <div class="answer">
+<pre><code>#include &lt;stdio.h&gt;
+
+int main()
+{
+    int a[100], n, i;
+
+    printf("Enter size: ");
+    scanf("%d", &amp;n);
+
+    for(i = 0; i &lt; n; i++)
+    {
+        scanf("%d", &amp;a[i]);
+    }
+
+    printf("Array elements: ");
+
+    for(i = 0; i &lt; n; i++)
+    {
+        printf("%d ", a[i]);
+    }
+
+    return 0;
+}</code></pre>
+        <p><b>Input:</b> 5 10 20 30 40 50</p>
+        <p><b>Output:</b> 10 20 30 40 50</p>
+        </div>
+    </div>
+
+    <!-- Q2 -->
+    <div class="question">
+        <h3>Q2. Print array elements in reverse order.</h3>
+        <button onclick="showAnswer(this)">Show Answer</button>
+        <div class="answer">
+<pre><code>#include &lt;stdio.h&gt;
+
+int main()
+{
+    int a[100], n, i;
+
+    printf("Enter size: ");
+    scanf("%d", &amp;n);
+
+    for(i = 0; i &lt; n; i++)
+        scanf("%d", &amp;a[i]);
+
+    for(i = n - 1; i &gt;= 0; i--)
+        printf("%d ", a[i]);
+
+    return 0;
+}</code></pre>
+        <p><b>Input:</b> 5 1 2 3 4 5</p>
+        <p><b>Output:</b> 5 4 3 2 1</p>
+        </div>
+    </div>
+
+    <!-- Q3 -->
+    <div class="question">
+        <h3>Q3. Copy one array into another array.</h3>
+        <button onclick="showAnswer(this)">Show Answer</button>
+        <div class="answer">
+<pre><code>#include &lt;stdio.h&gt;
+
+int main()
+{
+    int a[100], b[100], n, i;
+
+    scanf("%d", &amp;n);
+
+    for(i = 0; i &lt; n; i++)
+        scanf("%d", &amp;a[i]);
+
+    for(i = 0; i &lt; n; i++)
+        b[i] = a[i];
+
+    printf("Copied array: ");
+
+    for(i = 0; i &lt; n; i++)
+        printf("%d ", b[i]);
+
+    return 0;
+}</code></pre>
+        <p><b>Input:</b> 3 10 20 30</p>
+        <p><b>Output:</b> 10 20 30</p>
+        </div>
+    </div>
+
+    <!-- Q4 -->
+    <div class="question">
+        <h3>Q4. Copy array elements in reverse order into another array.</h3>
+        <button onclick="showAnswer(this)">Show Answer</button>
+        <div class="answer">
+<pre><code>#include &lt;stdio.h&gt;
+
+int main()
+{
+    int a[100], b[100], n, i;
+
+    scanf("%d", &amp;n);
+
+    for(i = 0; i &lt; n; i++)
+        scanf("%d", &amp;a[i]);
+
+    for(i = 0; i &lt; n; i++)
+        b[i] = a[n - 1 - i];
+
+    for(i = 0; i &lt; n; i++)
+        printf("%d ", b[i]);
+
+    return 0;
+}</code></pre>
+        <p><b>Input:</b> 4 1 2 3 4</p>
+        <p><b>Output:</b> 4 3 2 1</p>
+        </div>
+    </div>
+
+    <!-- Q5 -->
+    <div class="question">
+        <h3>Q5. Print only even elements of an array.</h3>
+        <button onclick="showAnswer(this)">Show Answer</button>
+        <div class="answer">
+<pre><code>#include &lt;stdio.h&gt;
+
+int main()
+{
+    int a[100], n, i;
+
+    scanf("%d", &amp;n);
+
+    for(i = 0; i &lt; n; i++)
+        scanf("%d", &amp;a[i]);
+
+    for(i = 0; i &lt; n; i++)
+    {
+        if(a[i] % 2 == 0)
+            printf("%d ", a[i]);
+    }
+
+    return 0;
+}</code></pre>
+        <p><b>Input:</b> 5 1 2 3 4 6</p>
+        <p><b>Output:</b> 2 4 6</p>
+        </div>
+    </div>
+
+    <!-- Q6 -->
+    <div class="question">
+        <h3>Q6. Print only positive elements of an array.</h3>
+        <button onclick="showAnswer(this)">Show Answer</button>
+        <div class="answer">
+<pre><code>#include &lt;stdio.h&gt;
+
+int main()
+{
+    int a[100], n, i;
+
+    scanf("%d", &amp;n);
+
+    for(i = 0; i &lt; n; i++)
+        scanf("%d", &amp;a[i]);
+
+    for(i = 0; i &lt; n; i++)
+    {
+        if(a[i] &gt; 0)
+            printf("%d ", a[i]);
+    }
+
+    return 0;
+}</code></pre>
+        <p><b>Input:</b> 5 -2 4 0 -5 8</p>
+        <p><b>Output:</b> 4 8</p>
+        </div>
+    </div>
+
+    <!-- Q7 -->
+    <div class="question">
+        <h3>Q7. Print the square of each array element.</h3>
+        <button onclick="showAnswer(this)">Show Answer</button>
+        <div class="answer">
+<pre><code>#include &lt;stdio.h&gt;
+
+int main()
+{
+    int a[100], n, i;
+
+    scanf("%d", &amp;n);
+
+    for(i = 0; i &lt; n; i++)
+        scanf("%d", &amp;a[i]);
+
+    for(i = 0; i &lt; n; i++)
+        printf("%d ", a[i] * a[i]);
+
+    return 0;
+}</code></pre>
+        <p><b>Input:</b> 4 2 3 4 5</p>
+        <p><b>Output:</b> 4 9 16 25</p>
+        </div>
+    </div>
+
+    <!-- Q8 -->
+    <div class="question">
+        <h3>Q8. Print only odd elements of an array.</h3>
+        <button onclick="showAnswer(this)">Show Answer</button>
+        <div class="answer">
+<pre><code>#include &lt;stdio.h&gt;
+
+int main()
+{
+    int a[100], n, i;
+
+    scanf("%d", &amp;n);
+
+    for(i = 0; i &lt; n; i++)
+        scanf("%d", &amp;a[i]);
+
+    for(i = 0; i &lt; n; i++)
+    {
+        if(a[i] % 2 != 0)
+            printf("%d ", a[i]);
+    }
+
+    return 0;
+}</code></pre>
+        <p><b>Input:</b> 5 1 2 3 4 5</p>
+        <p><b>Output:</b> 1 3 5</p>
+        </div>
+    </div>
+
+    <!-- Q9 -->
+    <div class="question">
+        <h3>Q9. Find the sum of all array elements.</h3>
+        <button onclick="showAnswer(this)">Show Answer</button>
+        <div class="answer">
+<pre><code>#include &lt;stdio.h&gt;
+
+int main()
+{
+    int a[100], n, i, sum = 0;
+
+    scanf("%d", &amp;n);
+
+    for(i = 0; i &lt; n; i++)
+    {
+        scanf("%d", &amp;a[i]);
+        sum = sum + a[i];
+    }
+
+    printf("Sum = %d", sum);
+
+    return 0;
+}</code></pre>
+        <p><b>Input:</b> 4 10 20 30 40</p>
+        <p><b>Output:</b> Sum = 100</p>
+        </div>
+    </div>
+
+    <!-- Q10 -->
+    <div class="question">
+        <h3>Q10. Search an element in an array.</h3>
+        <button onclick="showAnswer(this)">Show Answer</button>
+        <div class="answer">
+<pre><code>#include &lt;stdio.h&gt;
+
+int main()
+{
+    int a[100], n, i, key, found = 0;
+
+    scanf("%d", &amp;n);
+
+    for(i = 0; i &lt; n; i++)
+        scanf("%d", &amp;a[i]);
+
+    printf("Enter number to search: ");
+    scanf("%d", &amp;key);
+
+    for(i = 0; i &lt; n; i++)
+    {
+        if(a[i] == key)
+        {
+            found = 1;
+            break;
+        }
+    }
+
+    if(found == 1)
+        printf("Element found");
+    else
+        printf("Element not found");
+
+    return 0;
+}</code></pre>
+        <p><b>Input:</b> 4 10 20 30 40, search 30</p>
+        <p><b>Output:</b> Element found</p>
+        </div>
+    </div>
+
+    <!-- Q11 -->
+    <div class="question">
+        <h3>Q11. Sort array elements in ascending order.</h3>
+        <button onclick="showAnswer(this)">Show Answer</button>
+        <div class="answer">
+<pre><code>#include &lt;stdio.h&gt;
+
+int main()
+{
+    int a[100], n, i, j, temp;
+
+    scanf("%d", &amp;n);
+
+    for(i = 0; i &lt; n; i++)
+        scanf("%d", &amp;a[i]);
+
+    for(i = 0; i &lt; n - 1; i++)
+    {
+        for(j = 0; j &lt; n - 1 - i; j++)
+        {
+            if(a[j] &gt; a[j + 1])
+            {
+                temp = a[j];
+                a[j] = a[j + 1];
+                a[j + 1] = temp;
+            }
+        }
+    }
+
+    for(i = 0; i &lt; n; i++)
+        printf("%d ", a[i]);
+
+    return 0;
+}</code></pre>
+        <p><b>Input:</b> 5 5 3 1 4 2</p>
+        <p><b>Output:</b> 1 2 3 4 5</p>
+        </div>
+    </div>
+
+    <!-- Q12 -->
+    <div class="question">
+        <h3>Q12. Find the maximum element in an array.</h3>
+        <button onclick="showAnswer(this)">Show Answer</button>
+        <div class="answer">
+<pre><code>#include &lt;stdio.h&gt;
+
+int main()
+{
+    int a[100], n, i, max;
+
+    scanf("%d", &amp;n);
+
+    for(i = 0; i &lt; n; i++)
+        scanf("%d", &amp;a[i]);
+
+    max = a[0];
+
+    for(i = 1; i &lt; n; i++)
+    {
+        if(a[i] &gt; max)
+            max = a[i];
+    }
+
+    printf("Maximum = %d", max);
+
+    return 0;
+}</code></pre>
+        <p><b>Input:</b> 5 10 25 8 40 15</p>
+        <p><b>Output:</b> Maximum = 40</p>
+        </div>
+    </div>
+
+    <!-- Q13 -->
+    <div class="question">
+        <h3>Q13. Find the minimum element in an array.</h3>
+        <button onclick="showAnswer(this)">Show Answer</button>
+        <div class="answer">
+<pre><code>#include &lt;stdio.h&gt;
+
+int main()
+{
+    int a[100], n, i, min;
+
+    scanf("%d", &amp;n);
+
+    for(i = 0; i &lt; n; i++)
+        scanf("%d", &amp;a[i]);
+
+    min = a[0];
+
+    for(i = 1; i &lt; n; i++)
+    {
+        if(a[i] &lt; min)
+            min = a[i];
+    }
+
+    printf("Minimum = %d", min);
+
+    return 0;
+}</code></pre>
+        <p><b>Input:</b> 5 10 25 8 40 15</p>
+        <p><b>Output:</b> Minimum = 8</p>
+        </div>
+    </div>
+
+</div>
+
+<footer>
+    <p>Created by BCA-1 Student | C Programming Practice</p>
+</footer>
+
+<script>
+function showAnswer(button)
+{
+    let answer = button.nextElementSibling;
+
+    if(answer.style.display == "block")
+    {
+        answer.style.display = "none";
+        button.innerText = "Show Answer";
+    }
+    else
+    {
+        answer.style.display = "block";
+        button.innerText = "Hide Answer";
+    }
+}
+
+function searchQuestions()
+{
+    let input = document.getElementById("search").value.toLowerCase();
+    let questions = document.getElementsByClassName("question");
+
+    for(let i = 0; i < questions.length; i++)
+    {
+        let text = questions[i].innerText.toLowerCase();
+
+        if(text.includes(input))
+            questions[i].style.display = "block";
+        else
+            questions[i].style.display = "none";
+    }
+}
+</script>
+
+</body>
+</html><!DOCTYPE html>
+<html>
+<head>
+    <title>Matrix - C Programming</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background: #f0f6ff;
+            margin: 0;
+        }
+
+        header {
+            background: #0755a5;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        nav {
+            background: #d5e8ff;
+            text-align: center;
+            padding: 12px;
+        }
+
+        nav a {
+            margin: 15px;
+            color: #0755a5;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .container {
+            width: 85%;
+            margin: 20px auto;
+        }
+
+        input {
+            width: 95%;
+            padding: 12px;
+            margin-bottom: 20px;
+        }
+
+        .question {
+            background: white;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 5px #ccc;
+        }
+
+        button {
+            background: #0755a5;
+            color: white;
+            padding: 8px 15px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .answer {
+            display: none;
+            margin-top: 15px;
+        }
+
+        pre {
+            background: #eaf2ff;
+            padding: 12px;
+            overflow-x: auto;
+        }
+
+        footer {
+            background: #0755a5;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>C Programming Website</h1>
+    <p>BCA - First Semester</p>
+</header>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="arrays.html">Previous</a>
+    <a href="strings.html">Next</a>
+</nav>
+
+<div class="container">
+
+    <h2>Multidimensional Arrays (Matrices)</h2>
+    <p>Practice basic matrix programs using 2D arrays.</p>
+
+    <input type="text" id="search"
+    placeholder="Search matrix programs..."
+    onkeyup="searchQuestions()">
+
+    <!-- Q1 -->
+    <div class="question">
+        <h3>Q1. Input and display a 2×2 matrix.</h3>
+        <button onclick="showAnswer(this)">Show Answer</button>
+
+        <div class="answer">
+<pre><code>#include &lt;stdio.h&gt;
+
+int main()
+{
+    int a[2][2], i, j;
+
+    printf("Enter 4 elements: ");
+
+    for(i = 0; i &lt; 2; i++)
+    {
+        for(j = 0; j &lt; 2; j++)
+        {
+            scanf("%d", &amp;a[i][j]);
+        }
+    }
+
+    printf("Matrix:\n");
+
+    for(i = 0; i &lt; 2; i++)
+    {
+        for(j = 0; j &lt; 2; j++)
+        {
+            printf("%d ", a[i][j]);
+        }
+
+        printf("\n");
+    }
+
+    return 0;
+}</code></pre>
+
+        <p><b>Input:</b> 1 2 3 4</p>
+        <p><b>Output:</b><br>1 2<br>3 4</p>
+        </div>
+    </div>
+
+    <!-- Q2 -->
+    <div class="question">
+        <h3>Q2. Find the transpose of a 2×2 matrix.</h3>
+        <button onclick="showAnswer(this)">Show Answer</button>
+
+        <div class="answer">
+<pre><code>#include &lt;stdio.h&gt;
+
+int main()
+{
+    int a[2][2], i, j;
+
+    printf("Enter 4 elements: ");
+
+    for(i = 0; i &lt; 2; i++)
+    {
+        for(j = 0; j &lt; 2; j++)
+        {
+            scanf("%d", &amp;a[i][j]);
+        }
+    }
+
+    printf("Transpose:\n");
+
+    for(i = 0; i &lt; 2; i++)
+    {
+        for(j = 0; j &lt; 2; j++)
+        {
+            printf("%d ", a[j][i]);
+        }
+
+        printf("\n");
+    }
+
+    return 0;
+}</code></pre>
+
+        <p><b>Input:</b> 1 2 3 4</p>
+        <p><b>Output:</b><br>1 3<br>2 4</p>
+        </div>
+    </div>
+
+    <!-- Q3 -->
+    <div class="question">
+        <h3>Q3. Add two 2×2 matrices.</h3>
+        <button onclick="showAnswer(this)">Show Answer</button>
+
+        <div class="answer">
+<pre><code>#include &lt;stdio.h&gt;
+
+int main()
+{
+    int a[2][2], b[2][2], c[2][2];
+    int i, j;
+
+    printf("Enter first matrix:\n");
+
+    for(i = 0; i &lt; 2; i++)
+    {
+        for(j = 0; j &lt; 2; j++)
+        {
+            scanf("%d", &amp;a[i][j]);
+        }
+    }
+
+    printf("Enter second matrix:\n");
+
+    for(i = 0; i &lt; 2; i++)
+    {
+        for(j = 0; j &lt; 2; j++)
+        {
+            scanf("%d", &amp;b[i][j]);
+        }
+    }
+
+    for(i = 0; i &lt; 2; i++)
+    {
+        for(j = 0; j &lt; 2; j++)
+        {
+            c[i][j] = a[i][j] + b[i][j];
+        }
+    }
+
+    printf("Addition:\n");
+
+    for(i = 0; i &lt; 2; i++)
+    {
+        for(j = 0; j &lt; 2; j++)
+        {
+            printf("%d ", c[i][j]);
+        }
+
+        printf("\n");
+    }
+
+    return 0;
+}</code></pre>
+
+        <p><b>Input:</b><br>1 2 3 4<br>5 6 7 8</p>
+        <p><b>Output:</b><br>6 8<br>10 12</p>
+        </div>
+    </div>
+
+    <!-- Q4 -->
+    <div class="question">
+        <h3>Q4. Subtract two 2×2 matrices.</h3>
+        <button onclick="showAnswer(this)">Show Answer</button>
+
+        <div class="answer">
+<pre><code>#include &lt;stdio.h&gt;
+
+int main()
+{
+    int a[2][2], b[2][2], c[2][2];
+    int i, j;
+
+    printf("Enter first matrix:\n");
+
+    for(i = 0; i &lt; 2; i++)
+    {
+        for(j = 0; j &lt; 2; j++)
+        {
+            scanf("%d", &amp;a[i][j]);
+        }
+    }
+
+    printf("Enter second matrix:\n");
+
+    for(i = 0; i &lt; 2; i++)
+    {
+        for(j = 0; j &lt; 2; j++)
+        {
+            scanf("%d", &amp;b[i][j]);
+        }
+    }
+
+    for(i = 0; i &lt; 2; i++)
+    {
+        for(j = 0; j &lt; 2; j++)
+        {
+            c[i][j] = a[i][j] - b[i][j];
+        }
+    }
+
+    printf("Subtraction:\n");
+
+    for(i = 0; i &lt; 2; i++)
+    {
+        for(j = 0; j &lt; 2; j++)
+        {
+            printf("%d ", c[i][j]);
+        }
+
+        printf("\n");
+    }
+
+    return 0;
+}</code></pre>
+
+        <p><b>Input:</b><br>5 6 7 8<br>1 2 3 4</p>
+        <p><b>Output:</b><br>4 4<br>4 4</p>
+        </div>
+    </div>
+
+    <!-- Q5 -->
+    <div class="question">
+        <h3>Q5. Multiply two 2×2 matrices.</h3>
+        <button onclick="showAnswer(this)">Show Answer</button>
+
+        <div class="answer">
+<pre><code>#include &lt;stdio.h&gt;
+
+int main()
+{
+    int a[2][2], b[2][2], c[2][2];
+    int i, j, k;
+
+    printf("Enter first matrix:\n");
+
+    for(i = 0; i &lt; 2; i++)
+    {
+        for(j = 0; j &lt; 2; j++)
+        {
+            scanf("%d", &amp;a[i][j]);
+        }
+    }
+
+    printf("Enter second matrix:\n");
+
+    for(i = 0; i &lt; 2; i++)
+    {
+        for(j = 0; j &lt; 2; j++)
+        {
+            scanf("%d", &amp;b[i][j]);
+        }
+    }
+
+    for(i = 0; i &lt; 2; i++)
+    {
+        for(j = 0; j &lt; 2; j++)
+        {
+            c[i][j] = 0;
+
+            for(k = 0; k &lt; 2; k++)
+            {
+                c[i][j] = c[i][j] +
+                a[i][k] * b[k][j];
+            }
+        }
+    }
+
+    printf("Multiplication:\n");
+
+    for(i = 0; i &lt; 2; i++)
+    {
+        for(j = 0; j &lt; 2; j++)
+        {
+            printf("%d ", c[i][j]);
+        }
+
+        printf("\n");
+    }
+
+    return 0;
+}</code></pre>
+
+        <p><b>Input:</b><br>1 2 3 4<br>5 6 7 8</p>
+        <p><b>Output:</b><br>19 22<br>43 50</p>
+        </div>
+    </div>
+
+</div>
+
+<footer>
+    <p>Created by BCA-1 Student | C Programming Practice</p>
+</footer>
+
+<script>
+function showAnswer(button)
+{
+    let answer = button.nextElementSibling;
+
+    if(answer.style.display == "block")
+    {
+        answer.style.display = "none";
+        button.innerText = "Show Answer";
+    }
+    else
+    {
+        answer.style.display = "block";
+        button.innerText = "Hide Answer";
+    }
+}
+
+function searchQuestions()
+{
+    let input = document.getElementById("search").value.toLowerCase();
+    let questions = document.getElementsByClassName("question");
+
+    for(let i = 0; i < questions.length; i++)
+    {
+        let text = questions[i].innerText.toLowerCase();
+
+        if(text.includes(input))
+            questions[i].style.display = "block";
+        else
+            questions[i].style.display = "none";
+    }
+}
+</script>
+
+</body>
+</html><!DOCTYPE html>
+<html>
+<head>
+    <title>Strings - C Programming</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background: #f0f6ff;
+            margin: 0;
+        }
+
+        header {
+            background: #0755a5;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        nav {
+            background: #d5e8ff;
+            text-align: center;
+            padding: 12px;
+        }
+
+        nav a {
+            margin: 15px;
+            color: #0755a5;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .container {
+            width: 85%;
+            margin: 20px auto;
+        }
+
+        input {
+            width: 95%;
+            padding: 12px;
+            margin-bottom: 20px;
+        }
+
+        .question {
+            background: white;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 5px #ccc;
+        }
+
+        button {
+            background: #0755a5;
+            color: white;
+            padding: 8px 15px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .answer {
+            display: none;
+            margin-top: 15px;
+        }
+
+        pre {
+            background: #eaf2ff;
+            padding: 12px;
+            overflow-x: auto;
+        }
+
+        footer {
+            background: #0755a5;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>C Programming Website</h1>
+    <p>BCA - First Semester</p>
+</header>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="matrix.html">Previous</a>
+    <a href="functions.html">Next</a>
+</nav>
+
+<div class="container">
+
+    <h2>Strings in C</h2>
+    <p>Practice basic string programs using character arrays.</p>
+
+    <input type="text" id="search"
+    placeholder="Search string programs..."
+    onkeyup="searchQuestions()">
+
+    <!-- Q1 -->
+    <div class="question">
+        <h3>Q1. Convert a string into uppercase.</h3>
+        <button onclick="showAnswer(this)">Show Answer</button>
+        <div class="answer">
+<pre><code>#include &lt;stdio.h&gt;
+#include &lt;ctype.h&gt;
+
+int main()
+{
+    char s[100];
+    int i;
+
+    fgets(s, 100, stdin);
+
+    for(i = 0; s[i] != '\0'; i++)
+        s[i] = toupper((unsigned char)s[i]);
+
+    printf("%s", s);
+    return 0;
+}</code></pre>
+        <p><b>Input:</b> hello</p>
+        <p><b>Output:</b> HELLO</p>
+        </div>
+    </div>
+
+    <!-- Q2 -->
+    <div class="question">
+        <h3>Q2. Convert a string into lowercase.</h3>
+        <button onclick="showAnswer(this)">Show Answer</button>
+        <div class="answer">
+<pre><code>#include &lt;stdio.h&gt;
+#include &lt;ctype.h&gt;
+
+int main()
+{
+    char s[100];
+    int i;
+
+    fgets(s, 100, stdin);
+
+    for(i = 0; s[i] != '\0'; i++)
+        s[i] = tolower((unsigned char)s[i]);
+
+    printf("%s", s);
+    return 0;
+}</code></pre>
+        <p><b>Input:</b> HELLO</p>
+        <p><b>Output:</b> hello</p>
+        </div>
+    </div>
+
+    <!-- Q3 -->
+    <div class="question">
+        <h3>Q3. Convert the first character of a string into uppercase (sentence case).</h3>
+        <button onclick="showAnswer(this)">Show Answer</button>
+        <div class="answer">
+<pre><code>#include &lt;stdio.h&gt;
+#include &lt;ctype.h&gt;
+
+int main()
+{
+    char s[100];
+
+    fgets(s, 100, stdin);
+
+    s[0] = toupper((unsigned char)s[0]);
+
+    printf("%s", s);
+    return 0;
+}</code></pre>
+        <p><b>Input:</b> hello world</p>
+        <p><b>Output:</b> Hello world</p>
+        </div>
+    </div>
+
+    <!-- Q4 -->
+    <div class="question">
+        <h3>Q4. Convert the first letter of every word into uppercase (title case).</h3>
+        <button onclick="showAnswer(this)">Show Answer</button>
+        <div class="answer">
+<pre><code>#include &lt;stdio.h&gt;
+#include &lt;ctype.h&gt;
+
+int main()
+{
+    char s[100];
+    int i;
+
+    fgets(s, 100, stdin);
+
+    s[0] = toupper((unsigned char)s[0]);
+
+    for(i = 1; s[i] != '\0'; i++)
+    {
+        if(s[i - 1] == ' ')
+            s[i] = toupper((unsigned char)s[i]);
+    }
+
+    printf("%s", s);
+    return 0;
+}</code></pre>
+        <p><b>Input:</b> hello world in c</p>
+        <p><b>Output:</b> Hello World In C</p>
+        </div>
+    </div>
+
+    <!-- Q5 -->
+    <div class="question">
+        <h3>Q5. Toggle the case of each character in a string.</h3>
+        <button onclick="showAnswer(this)">Show Answer</button>
+        <div class="answer">
+<pre><code>#include &lt;stdio.h&gt;
+#include &lt;ctype.h&gt;
+
+int main()
+{
+    char s[100];
+    int i;
+
+    fgets(s, 100, stdin);
+
+    for(i = 0; s[i] != '\0'; i++)
+    {
+        if(islower((unsigned char)s[i]))
+            s[i] = toupper((unsigned char)s[i]);
+        else if(isupper((unsigned char)s[i]))
+            s[i] = tolower((unsigned char)s[i]);
+    }
+
+    printf("%s", s);
+    return 0;
+}</code></pre>
+        <p><b>Input:</b> Hello World</p>
+        <p><b>Output:</b> hELLO wORLD</p>
+        </div>
+    </div>
+
+    <!-- Q6 -->
+    <div class="question">
+        <h3>Q6. Find the length of a string without using strlen().</h3>
+        <button onclick="showAnswer(this)">Show Answer</button>
+        <div class="answer">
+<pre><code>#include &lt;stdio.h&gt;
+
+int main()
+{
+    char s[100];
+    int i = 0;
+
+    fgets(s, 100, stdin);
+
+    while(s[i] != '\0' &amp;&amp; s[i] != '\n')
+        i++;
+
+    printf("Length = %d", i);
+    return 0;
+}</code></pre>
+        <p><b>Input:</b> Hello</p>
+        <p><b>Output:</b> Length = 5</p>
+        </div>
+    </div>
+
+    <!-- Q7 -->
+    <div class="question">
+        <h3>Q7. Compare two strings using strcmp().</h3>
+        <button onclick="showAnswer(this)">Show Answer</button>
+        <div class="answer">
+<pre><code>#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+
+int main()
+{
+    char a[100], b[100];
+
+    fgets(a, 100, stdin);
+    fgets(b, 100, stdin);
+
+    a[strcspn(a, "\n")] = '\0';
+    b[strcspn(b, "\n")] = '\0';
+
+    if(strcmp(a, b) == 0)
+        printf("Strings are equal");
+    else
+        printf("Strings are not equal");
+
+    return 0;
+}</code></pre>
+        <p><b>Input:</b><br>hello<br>hello</p>
+        <p><b>Output:</b> Strings are equal</p>
+        </div>
+    </div>
+
+    <!-- Q8 -->
+    <div class="question">
+        <h3>Q8. Concatenate two strings using strcat().</h3>
+        <button onclick="showAnswer(this)">Show Answer</button>
+        <div class="answer">
+<pre><code>#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+
+int main()
+{
+    char a[200], b[100];
+
+    fgets(a, 100, stdin);
+    fgets(b, 100, stdin);
+
+    a[strcspn(a, "\n")] = '\0';
+    b[strcspn(b, "\n")] = '\0';
+
+    strcat(a, b);
+
+    printf("%s", a);
+    return 0;
+}</code></pre>
+        <p><b>Input:</b><br>Hello<br>World</p>
+        <p><b>Output:</b> HelloWorld</p>
+        </div>
+    </div>
+
+    <!-- Q9 -->
+    <div class="question">
+        <h3>Q9. Copy one string into another using strcpy().</h3>
+        <button onclick="showAnswer(this)">Show Answer</button>
+        <div class="answer">
+<pre><code>#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+
+int main()
+{
+    char a[100], b[100];
+
+    fgets(a, 100, stdin);
+    a[strcspn(a, "\n")] = '\0';
+
+    strcpy(b, a);
+
+    printf("Copied string: %s", b);
+    return 0;
+}</code></pre>
+        <p><b>Input:</b> Hello</p>
+        <p><b>Output:</b> Copied string: Hello</p>
+        </div>
+    </div>
+
+    <!-- Q10 -->
+    <div class="question">
+        <h3>Q10. Print a character of a string using its index (0 is the first character).</h3>
+        <button onclick="showAnswer(this)">Show Answer</button>
+        <div class="answer">
+<pre><code>#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+
+int main()
+{
+    char s[100];
+    int index;
+
+    fgets(s, 100, stdin);
+    s[strcspn(s, "\n")] = '\0';
+
+    printf("Enter index: ");
+    scanf("%d", &amp;index);
+
+    if(index &gt;= 0 &amp;&amp; index &lt; strlen(s))
+        printf("Character = %c", s[index]);
+    else
+        printf("Invalid index");
+
+    return 0;
+}</code></pre>
+        <p><b>Input:</b> Hello, index 1</p>
+        <p><b>Output:</b> Character = e</p>
+        </div>
+    </div>
+
+    <!-- Q11 -->
+    <div class="question">
+        <h3>Q11. Print each character of a string on a separate line.</h3>
+        <button onclick="showAnswer(this)">Show Answer</button>
+        <div class="answer">
+<pre><code>#include &lt;stdio.h&gt;
+
+int main()
+{
+    char s[100];
+    int i;
+
+    fgets(s, 100, stdin);
+
+    for(i = 0; s[i] != '\0' &amp;&amp; s[i] != '\n'; i++)
+        printf("%c\n", s[i]);
+
+    return 0;
+}</code></pre>
+        <p><b>Input:</b> CAT</p>
+        <p><b>Output:</b><br>C<br>A<br>T</p>
+        </div>
+    </div>
+
+    <!-- Q12 -->
+    <div class="question">
+        <h3>Q12. Copy a string in reverse order into another string.</h3>
+        <button onclick="showAnswer(this)">Show Answer</button>
+        <div class="answer">
+<pre><code>#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+
+int main()
+{
+    char a[100], b[100];
+    int i, len;
+
+    fgets(a, 100, stdin);
+    a[strcspn(a, "\n")] = '\0';
+
+    len = strlen(a);
+
+    for(i = 0; i &lt; len; i++)
+        b[i] = a[len - 1 - i];
+
+    b[len] = '\0';
+
+    printf("Reversed string: %s", b);
+    return 0;
+}</code></pre>
+        <p><b>Input:</b> HELLO</p>
+        <p><b>Output:</b> OLLEH</p>
+        </div>
+    </div>
+
+    <!-- Q13 -->
+    <div class="question">
+        <h3>Q13. Compare two strings and count different characters at the same positions.</h3>
+        <button onclick="showAnswer(this)">Show Answer</button>
+        <div class="answer">
+<pre><code>#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+
+int main()
+{
+    char a[100], b[100];
+    int i, count = 0;
+
+    fgets(a, 100, stdin);
+    fgets(b, 100, stdin);
+
+    a[strcspn(a, "\n")] = '\0';
+    b[strcspn(b, "\n")] = '\0';
+
+    for(i = 0; a[i] != '\0' || b[i] != '\0'; i++)
+    {
+        if(a[i] != b[i])
+            count++;
+    }
+
+    printf("Different characters = %d", count);
+    return 0;
+}</code></pre>
+        <p><b>Input:</b><br>CAT<br>BAT</p>
+        <p><b>Output:</b> Different characters = 1</p>
+        </div>
+    </div>
+
+    <!-- Q14 -->
+    <div class="question">
+        <h3>Q14. Check whether a character exists in a string.</h3>
+        <button onclick="showAnswer(this)">Show Answer</button>
+        <div class="answer">
+<pre><code>#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+
+int main()
+{
+    char s[100], ch;
+    int i, found = 0;
+
+    fgets(s, 100, stdin);
+
+    printf("Enter character: ");
+    scanf("%c", &amp;ch);
+
+    for(i = 0; s[i] != '\0'; i++)
+    {
+        if(s[i] == ch)
+        {
+            found = 1;
+            break;
+        }
+    }
+
+    if(found)
+        printf("Character exists");
+    else
+        printf("Character does not exist");
+
+    return 0;
+}</code></pre>
+        <p><b>Input:</b><br>Hello<br>e</p>
+        <p><b>Output:</b> Character exists</p>
+        </div>
+    </div>
+
+    <!-- Q15 -->
+    <div class="question">
+        <h3>Q15. Find the index of a character in a string.</h3>
+        <button onclick="showAnswer(this)">Show Answer</button>
+        <div class="answer">
+<pre><code>#include &lt;stdio.h&gt;
+
+int main()
+{
+    char s[100], ch;
+    int i, index = -1;
+
+    fgets(s, 100, stdin);
+
+    printf("Enter character: ");
+    scanf("%c", &amp;ch);
+
+    for(i = 0; s[i] != '\0'; i++)
+    {
+        if(s[i] == ch)
+        {
+            index = i;
+            break;
+        }
+    }
+
+    if(index != -1)
+        printf("Index = %d", index);
+    else
+        printf("Character not found");
+
+    return 0;
+}</code></pre>
+        <p><b>Input:</b><br>Hello<br>l</p>
+        <p><b>Output:</b> Index = 2</p>
+        </div>
+    </div>
+
+    <!-- Q16 -->
+    <div class="question">
+        <h3>Q16. Count the vowels in a string.</h3>
+        <button onclick="showAnswer(this)">Show Answer</button>
+        <div class="answer">
+<pre><code>#include &lt;stdio.h&gt;
+#include &lt;ctype.h&gt;
+
+int main()
+{
+    char s[100];
+    int i, count = 0;
+
+    fgets(s, 100, stdin);
+
+    for(i = 0; s[i] != '\0'; i++)
+    {
+        char ch = tolower((unsigned char)s[i]);
+
+        if(ch == 'a' || ch == 'e' || ch == 'i' ||
+           ch == 'o' || ch == 'u')
+            count++;
+    }
+
+    printf("Vowels = %d", count);
+    return 0;
+}</code></pre>
+        <p><b>Input:</b> Education</p>
+        <p><b>Output:</b> Vowels = 5</p>
+        </div>
+    </div>
+
+    <!-- Q17 -->
+    <div class="question">
+        <h3>Q17. Print a character from a string using a given index.</h3>
+        <button onclick="showAnswer(this)">Show Answer</button>
+        <div class="answer">
+<pre><code>#include &lt;stdio.h&gt;
+
+int main()
+{
+    char s[100];
+    int index;
+
+    fgets(s, 100, stdin);
+
+    printf("Enter index: ");
+    scanf("%d", &amp;index);
+
+    if(index &gt;= 0 &amp;&amp; s[index] != '\0' &amp;&;&amp; s[index] != '\n')
+        printf("%c", s[index]);
+    else
+        printf("Invalid index");
+
+    return 0;
+}</code></pre>
+        <p><b>Input:</b> Apple, index 3</p>
+        <p><b>Output:</b> l</p>
+        </div>
+    </div>
+
+    <!-- Q18 -->
+    <div class="question">
+        <h3>Q18. Check whether a string is a palindrome.</h3>
+        <button onclick="showAnswer(this)">Show Answer</button>
+        <div class="answer">
+<pre><code>#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+
+int main()
+{
+    char s[100];
+    int i, len, flag = 1;
+
+    fgets(s, 100, stdin);
+    s[strcspn(s, "\n")] = '\0';
+
+    len = strlen(s);
+
+    for(i = 0; i &lt; len / 2; i++)
+    {
+        if(s[i] != s[len - 1 - i])
+        {
+            flag = 0;
+            break;
+        }
+    }
+
+    if(flag)
+        printf("Palindrome");
+    else
+        printf("Not a palindrome");
+
+    return 0;
+}</code></pre>
+        <p><b>Input:</b> madam</p>
+        <p><b>Output:</b> Palindrome</p>
+        </div>
+    </div>
+
+    <!-- Q19 -->
+    <div class="question">
+        <h3>Q19. Create a student record using a structure and display marks of 5 subjects.</h3>
+        <button onclick="showAnswer(this)">Show Answer</button>
+        <div class="answer">
+<pre><code>#include &lt;stdio.h&gt;
+
+struct Student
+{
+    int roll;
+    char name[50];
+    char className[20];
+    int marks[5];
+};
+
+int main()
+{
+    struct Student s;
+    int i, total = 0;
+
+    printf("Enter roll number: ");
+    scanf("%d", &amp;s.roll);
+
+    getchar();
+
+    printf("Enter name: ");
+    fgets(s.name, 50, stdin);
+    s.name[strcspn(s.name, "\n")] = '\0';
+
+    printf("Enter class: ");
+    fgets(s.className, 20, stdin);
+    s.className[strcspn(s.className, "\n")] = '\0';
+
+    printf("Enter marks of 5 subjects: ");
+
+    for(i = 0; i &lt; 5; i++)
+    {
+        scanf("%d", &amp;s.marks[i]);
+        total = total + s.marks[i];
+    }
+
+    printf("\nRoll Number: %d", s.roll);
+    printf("\nName: %s", s.name);
+    printf("\nClass: %s", s.className);
+
+    for(i = 0; i &lt; 5; i++)
+        printf("\nSubject %d: %d", i + 1, s.marks[i]);
+
+    printf("\nTotal Marks: %d", total);
+
+    return 0;
+}</code></pre>
+        <p><b>Input:</b> Roll 1, name Aman, class BCA-1, marks 80 75 90 85 70</p>
+        <p><b>Output:</b> Student details and Total Marks: 400</p>
+        </div>
+    </div>
+
+</div>
+
+<footer>
+    <p>Created by BCA-1 Student | C Programming Practice</p>
+</footer>
+
+<script>
+function showAnswer(button)
+{
+    let answer = button.nextElementSibling;
+
+    if(answer.style.display == "block")
+    {
+        answer.style.display = "none";
+        button.innerText = "Show Answer";
+    }
+    else
+    {
+        answer.style.display = "block";
+        button.innerText = "Hide Answer";
+    }
+}
+
+function searchQuestions()
+{
+    let input = document.getElementById("search").value.toLowerCase();
+    let questions = document.getElementsByClassName("question");
+
+    for(let i = 0; i < questions.length; i++)
+    {
+        let text = questions[i].innerText.toLowerCase();
+
+        if(text.includes(input))
+            questions[i].style.display = "block";
+        else
+            questions[i].style.display = "none";
+    }
+}
+</script>
+
+</body>
+</html><!DOCTYPE html>
+<html>
+<head>
+    <title>Functions - C Programming</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background: #f0f6ff;
+            margin: 0;
+        }
+
+        header {
+            background: #0755a5;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        nav {
+            background: #d5e8ff;
+            text-align: center;
+            padding: 12px;
+        }
+
+        nav a {
+            margin: 15px;
+            color: #0755a5;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .container {
+            width: 85%;
+            margin: 20px auto;
+        }
+
+        input {
+            width: 95%;
+            padding: 12px;
+            margin-bottom: 20px;
+        }
+
+        .question {
+            background: white;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 5px #ccc;
+        }
+
+        button {
+            background: #0755a5;
+            color: white;
+            padding: 8px 15px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .answer {
+            display: none;
+            margin-top: 15px;
+        }
+
+        pre {
+            background: #eaf2ff;
+            padding: 12px;
+            overflow-x: auto;
+        }
+
+        footer {
+            background: #0755a5;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>C Programming Website</h1>
+    <p>BCA - First Semester</p>
+</header>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="strings.html">Previous</a>
+    <a href="structures.html">Next</a>
+</nav>
+
+<div class="container">
+
+    <h2>Functions in C</h2>
+    <p>Learn how to create and use functions in C programming.</p>
+
+    <input type="text" id="search"
+    placeholder="Search function programs..."
+    onkeyup="searchQuestions()">
+
+    <!-- Q1 -->
+    <div class="question">
+        <h3>Q1. Perform addition, subtraction, multiplication and division using functions.</h3>
+        <button onclick="showAnswer(this)">Show Answer</button>
+
+        <div class="answer">
+<pre><code>#include &lt;stdio.h&gt;
+
+int add(int a, int b)
+{
+    return a + b;
+}
+
+int subtract(int a, int b)
+{
+    return a - b;
+}
+
+int multiply(int a, int b)
+{
+    return a * b;
+}
+
+float divide(int a, int b)
+{
+    return (float)a / b;
+}
+
+int main()
+{
+    int a, b;
+
+    printf("Addition:\n");
+    scanf("%d%d", &amp;a, &amp;b);
+    printf("Result = %d\n", add(a, b));
+
+    printf("Subtraction:\n");
+    scanf("%d%d", &amp;a, &amp;b);
+    printf("Result = %d\n", subtract(a, b));
+
+    printf("Addition:\n");
+    scanf("%d%d", &amp;a, &amp;b);
+    printf("Result = %d\n", add(a, b));
+
+    printf("Multiplication:\n");
+    scanf("%d%d", &amp;a, &amp;b);
+    printf("Result = %d\n", multiply(a, b));
+
+    printf("Subtraction:\n");
+    scanf("%d%d", &amp;a, &amp;b);
+    printf("Result = %d\n", subtract(a, b));
+
+    printf("Multiplication:\n");
+    scanf("%d%d", &amp;a, &amp;b);
+    printf("Result = %d\n", multiply(a, b));
+
+    printf("Division:\n");
+    scanf("%d%d", &amp;a, &amp;b);
+
+    if(b != 0)
+        printf("Result = %.2f\n", divide(a, b));
+    else
+        printf("Division by zero is not allowed\n");
+
+    printf("Division:\n");
+    scanf("%d%d", &amp;a, &amp;b);
+
+    if(b != 0)
+        printf("Result = %.2f\n", divide(a, b));
+    else
+        printf("Division by zero is not allowed\n");
+
+    printf("Addition:\n");
+    scanf("%d%d", &amp;a, &amp;b);
+    printf("Result = %d\n", add(a, b));
+
+    return 0;
+}</code></pre>
+        <p><b>Input:</b> Enter two numbers for each operation.</p>
+        <p><b>Output:</b> Displays the result of each operation.</p>
+        </div>
+    </div>
+
+    <!-- Q2 -->
+    <div class="question">
+        <h3>Q2. Find the sum of 10 numbers using a function.</h3>
+        <button onclick="showAnswer(this)">Show Answer</button>
+
+        <div class="answer">
+<pre><code>#include &lt;stdio.h&gt;
+
+int sum(int a[])
+{
+    int i, total = 0;
+
+    for(i = 0; i &lt; 10; i++)
+        total = total + a[i];
+
+    return total;
+}
+
+int main()
+{
+    int a[10], i;
+
+    printf("Enter 10 numbers: ");
+
+    for(i = 0; i &lt; 10; i++)
+        scanf("%d", &amp;a[i]);
+
+    printf("Sum = %d", sum(a));
+
+    return 0;
+}</code></pre>
+        <p><b>Input:</b> 1 2 3 4 5 6 7 8 9 10</p>
+        <p><b>Output:</b> Sum = 55</p>
+        </div>
+    </div>
+
+    <!-- Q3 -->
+    <div class="question">
+        <h3>Q3. Input and display array elements using a function.</h3>
+        <<button onclick="showAnswer(this)">Show Answer</button>
+
+        <div class="answer">
+<pre><code>#include &lt;stdio.h&gt;
+
+void input(int a[], int n)
+{
+    int i;
+
+    for(i = 0; i &lt; n; i++)
+        scanf("%d", &amp;a[i]);
+}
+
+void display(int a[], int n)
+{
+    int i;
+
+    for(i = 0; i &lt; n; i++)
+        printf("%d ", a[i]);
+}
+
+int main()
+{
+    int a[100], n;
+
+    printf("Enter size: ");
+    scanf("%d", &amp;n);
+
+    printf("Enter elements: ");
+    input(a, n);
+
+    printf("Array: ");
+    display(a, n);
+
+    return 0;
+}</code></pre>
+        <p><b>Input:</b> 4 10 20 30 40</p>
+        <p><b>Output:</b> Array: 10 20 30 40</p>
+        </div>
+    </div>
+
+    <!-- Q4 -->
+    <div class="question">
+        <h3>Q4. Find factorial of a number using a function.</h3>
+        <<button onclick="showAnswer(this)">Show Answer</button>
+
+        <div class="answer">
+<pre><code>#include &lt;stdio.h&gt;
+
+int factorial(int n)
+{
+    int i, fact = 1;
+
+    for(i = 1; i &lt;= n; i++)
+        fact = fact * i;
+
+    return fact;
+}
+
+int main()
+{
+    int n;
+
+    printf("Enter a number: ");
+    scanf("%d", &amp;n);
+
+    if(n &gt;= 0 &amp;&amp; n &lt;= 12)
+        printf("Factorial = %d", factorial(n));
+    else
+        printf("Enter a number from 0 to 12");
+
+    return 0;
+}</code></pre>
+        <p><b>Input:</b> 5</p>
+        <p><b>Output:</b> Factorial = 120</p>
+        </div>
+    </div>
+
+    <!-- Q5 -->
+    <div class="question">
+        <h3>Q5. Swap two numbers using call-by-address (pointers).</h3>
+        <<button onclick="showAnswer(this)">Show Answer</button>
+
+        <div class="answer">
+<pre><code>#include &lt;stdio.h&gt;
+
+void swap(int *a, int *b)
+{
+    int temp;
+
+    temp = *a;
+    *a = *b;
+    *b = temp;
+}
+
+int main()
+{
+    int a, b;
+
+    printf("Enter two numbers: ");
+    scanf("%d%d", &amp;a, &amp;b);
+
+    swap(&amp;a, &amp;b);
+
+    printf("After swapping: %d %d", a, b);
+
+    return 0;
+}</code></pre>
+        <p><b>Input:</b> 10 20</p>
+        <p><b>Output:</b> After swapping: 20 10</p>
+        </div>
+    </div>
+
+    <!-- Q6 -->
+    <div class="question">
+        <h3>Q6. Swap two numbers using a function.</h3>
+        <<button onclick="showAnswer(this)">Show Answer</button>
+
+        <div class="answer">
+<pre><code>#include &lt;stdio.h&gt;
+
+void swap(int *x, int *y)
+{
+    int temp = *x;
+
+    *x = *y;
+    *y = temp;
+}
+
+int main()
+{
+    int a = 5, b = 10;
+
+    printf("Before: a = %d, b = %d\n", a, b);
+
+    swap(&amp;a, &amp;b);
+
+    printf("After: a = %d, b = %d", a, b);
+
+    return 0;
+}</code></pre>
+        <p><b>Input:</b> No input required.</p>
+        <p><b>Output:</b><br>Before: a = 5, b = 10<br>After: a = 10, b = 5</p>
+        </div>
+    </div>
+
+    <!-- Q7 -->
+    <div class="question">
+        <h3>Q7. Find the power of a number using a function.</h3>
+        <<button onclick="showAnswer(this)">Show Answer</button>
+
+        <div class="answer">
+<pre><code>#include &lt;stdio.h&gt;
+
+int power(int a, int b)
+{
+    int i, result = 1;
+
+    for(i = 1; i &lt;= b; i++)
+        result = result * a;
+
+    return result;
+}
+
+int main()
+{
+    int a, b;
+
+    printf("Enter base and power: ");
+    scanf("%d%d", &amp;a, &amp;b);
+
+    if(b &gt;= 0)
+        printf("Answer = %d", power(a, b));
+    else
+        printf("Power must be non-negative");
+
+    return 0;
+}</code></pre>
+        <p><b>Input:</b> 2 3</p>
+        <p><b>Output:</b> Answer = 8</p>
+        </div>
+    </div>
+
+    <!-- Q8 -->
+    <div class="question">
+        <h3>Q8. Find the cube of a number using a function.</h3>
+        <<button onclick="showAnswer(this)">Show Answer</button>
+
+        <div class="answer">
+<pre><code>#include &lt;stdio.h&gt;
+
+int cube(int n)
+{
+    return n * n * n;
+}
+
+int main()
+{
+    int n;
+
+    printf("Enter a number: ");
+    scanf("%d", &amp;n);
+
+    printf("Cube = %d", cube(n));
+
+    return 0;
+}</code></pre>
+        <p><b>Input:</b> 3</p>
+        <p><b>Output:</b> Cube = 27</p>
+        </div>
+    </div>
+
+</div>
+
+<footer>
+    <p>Created by BCA-1 Student | C Programming Practice</p>
+</footer>
+
+<script>
+function showAnswer(button)
+{
+    let answer = button.nextElementSibling;
+
+    if(answer.style.display == "block")
+    {
+        answer.style.display = "none";
+        button.innerText = "Show Answer";
+    }
+    else
+    {
+        answer.style.display = "block";
+        button.innerText = "Hide Answer";
+    }
+}
+
+function searchQuestions()
+{
+    let input = document.getElementById("search").value.toLowerCase();
+    let questions = document.getElementsByClassName("question");
+
+    for(let i = 0; i < questions.length; i++)
+    {
+        let text = questions[i].innerText.toLowerCase();
+
+        if(text.includes(input))
+            questions[i].style.display = "block";
+        else
+            questions[i].style.display = "none";
+    }
+}
+</script>
+
+</body>
+</html><!DOCTYPE html>
+<html>
+<head>
+    <title>Structures - C Programming</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background: #f0f6ff;
+            margin: 0;
+        }
+
+        header {
+            background: #0755a5;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        nav {
+            background: #d5e8ff;
+            text-align: center;
+            padding: 12px;
+        }
+
+        nav a {
+            margin: 15px;
+            color: #0755a5;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .container {
+            width: 85%;
+            margin: 20px auto;
+        }
+
+        input {
+            width: 95%;
+            padding: 12px;
+            margin-bottom: 20px;
+        }
+
+        .question {
+            background: white;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 5px #ccc;
+        }
+
+        button {
+            background: #0755a5;
+            color: white;
+            padding: 8px 15px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .answer {
+            display: none;
+            margin-top: 15px;
+        }
+
+        pre {
+            background: #eaf2ff;
+            padding: 12px;
+            overflow-x: auto;
+        }
+
+        footer {
+            background: #0755a5;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>C Programming Website</h1>
+    <p>BCA - First Semester</p>
+</header>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="functions.html">Previous</a>
+    <a href="nested.html">Next</a>
+</nav>
+
+<div class="container">
+
+    <h2>Structures in C</h2>
+    <p>Learn how to store different types of data using structures.</p>
+
+    <input type="text" id="search"
+    placeholder="Search structure programs..."
+    onkeyup="searchQuestions()">
+
+    <!-- Q1 -->
+    <div class="question">
+        <h3>Q1. Enter and display details of 50 employees using a structure.</h3>
+        <button onclick="showAnswer(this)">Show Answer</button>
+
+        <div class="answer">
+<pre><code>#include &lt;stdio.h&gt;
+
+struct Employee
+{
+    int id;
+    char name[50];
+    char designation[50];
+};
+
+int main()
+{
+    struct Employee e[50];
+    int i;
+
+    for(i = 0; i &lt; 50; i++)
+    {
+        printf("Enter ID, name and designation: ");
+        scanf("%d %49s %49s",
+              &amp;e[i].id,
+              e[i].name,
+              e[i].designation);
+    }
+
+    printf("\nID\tName\tDesignation\n");
+
+    for(i = 0; i &lt; 50; i++)
+    {
+        printf("%d\t%s\t%s\n",
+               e[i].id,
+               e[i].name,
+               e[i].designation);
+    }
+
+    return 0;
+}</code></pre>
+        <p><b>Input:</b> Enter ID, name and designation for 50 employees.</p>
+        <p><b>Output:</b> Displays all employee records in a table.</p>
+        </div>
+    </div>
+
+    <!-- Q2 -->
+    <div class="question">
+        <h3>Q2. Display only the names of employees using a structure.</h3>
+        <button onclick="showAnswer(this)">Show Answer</button>
+
+        <div class="answer">
+<pre><code>#include &lt;stdio.h&gt;
+
+struct Employee
+{
+    int id;
+    char name[50];
+    char designation[50];
+};
+
+int main()
+{
+    struct Employee e[50];
+    int i, n;
+
+    printf("Enter number of employees: ");
+    scanf("%d", &amp;n);
+
+    if(n &lt; 1 || n &gt; 50)
+    {
+        printf("Invalid number");
+        return 0;
+    }
+
+    for(i = 0; i &lt; n; i++)
+    {
+        printf("Enter ID, name and designation: ");
+        scanf("%d %49s %49s",
+              &amp;e[i].id,
+              e[i].name,
+              e[i].designation);
+    }
+
+    printf("\nEmployee Names:\n");
+
+    for(i = 0; i &lt; n; i++)
+        printf("%s\n", e[i].name);
+
+    return 0;
+}</code></pre>
+        <p><b>Input:</b><br>3<br>101 Aman Manager<br>102 Ravi Clerk<br>103 Simran Teacher</p>
+        <p><b>Output:</b><br>Aman<br>Ravi<br>Simran</p>
+        </div>
+    </div>
+
+    <!-- Q3 -->
+    <div class="question">
+        <h3>Q3. Display employee names and IDs using a structure.</h3>
+        <button onclick="showAnswer(this)">Show Answer</button>
+
+        <div class="answer">
+<pre><code>#include &lt;stdio.h&gt;
+
+struct Employee
+{
+    int id;
+    char name[50];
+    char designation[50];
+};
+
+int main()
+{
+    struct Employee e[50];
+    int i, n;
+
+    printf("Enter number of employees: ");
+    scanf("%d", &amp;n);
+
+    if(n &lt; 1 || n &gt; 50)
+    {
+        printf("Invalid number");
+        return 0;
+    }
+
+    for(i = 0; i &lt; n; i++)
+    {
+        printf("Enter ID, name and designation: ");
+        scanf("%d %49s %49s",
+              &amp;e[i].id,
+              e[i].name,
+              e[i].designation);
+    }
+
+    printf("\nID\tName\n");
+
+    for(i = 0; i &lt; n; i++)
+    {
+        printf("%d\t%s\n",
+               e[i].id,
+               e[i].name);
+    }
+
+    return 0;
+}</code></pre>
+        <p><b>Input:</b><br>2<br>101 Aman Manager<br>102 Ravi Clerk</p>
+        <p><b>Output:</b><br>ID Name<br>101 Aman<br>102 Ravi</p>
+        </div>
+    </div>
+
+    <!-- Q4 -->
+    <div class="question">
+        <h3>Q4. Enter student records and sort them in ascending order of roll number.</h3>
+        <button onclick="showAnswer(this)">Show Answer</button>
+
+        <div class="answer">
+<pre><code>#include &lt;stdio.h&gt;
+
+struct Student
+{
+    int roll;
+    char name[50];
+    float fee;
+    char dob[15];
+};
+
+int main()
+{
+    struct Student s[50], temp;
+    int n, i, j;
+
+    printf("Enter number of students: ");
+    scanf("%d", &amp;n);
+
+    if(n &lt; 1 || n &gt; 50)
+    {
+        printf("Invalid number");
+        return 0;
+    }
+
+    for(i = 0; i &lt; n; i++)
+    {
+        printf("Enter roll, name, fee and DOB: ");
+
+        scanf("%d %49s %f %14s",
+              &amp;s[i].roll,
+              s[i].name,
+              &amp;s[i].fee,
+              s[i].dob);
+    }
+
+    for(i = 0; i &lt; n - 1; i++)
+    {
+        for(j = 0; j &lt; n - 1 - i; j++)
+        {
+            if(s[j].roll &gt; s[j + 1].roll)
+            {
+                temp = s[j];
+                s[j] = s[j + 1];
+                s[j + 1] = temp;
+            }
+        }
+    }
+
+    printf("\nRoll\tName\tFee\tDOB\n");
+
+    for(i = 0; i &lt; n; i++)
+    {
+        printf("%d\t%s\t%.2f\t%s\n",
+               s[i].roll,
+               s[i].name,
+               s[i].fee,
+               s[i].dob);
+    }
+
+    return 0;
+}</code></pre>
+        <p><b>Input:</b><br>3<br>3 Aman 5000 12-05-2008<br>1 Ravi 4500 10-03-2007<br>2 Simran 6000 15-08-2008</p>
+        <p><b>Output:</b> Student records displayed in ascending order of roll number: 1, 2, 3.</p>
+        </div>
+    </div>
+
+</div>
+
+<footer>
+    <p>Created by BCA-1 Student | C Programming Practice</p>
+</footer>
+
+<script>
+function showAnswer(button)
+{
+    let answer = button.nextElementSibling;
+
+    if(answer.style.display == "block")
+    {
+        answer.style.display = "none";
+        button.innerText = "Show Answer";
+    }
+    else
+    {
+        answer.style.display = "block";
+        button.innerText = "Hide Answer";
+    }
+}
+
+function searchQuestions()
+{
+    let input = document.getElementById("search").value.toLowerCase();
+    let questions = document.getElementsByClassName("question");
+
+    for(let i = 0; i < questions.length; i++)
+    {
+        let text = questions[i].innerText.toLowerCase();
+
+        if(text.includes(input))
+            questions[i].style.display = "block";
+        else
+            questions[i].style.display = "none";
+    }
+}
+</script>
+
+</body>
+</html><!DOCTYPE html>
+<html>
+<head>
+    <title>Nested Loops - C Programming</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background-color: #f0f7ff;
+            margin: 0;
+        }
+
+        header {
+            background-color: #0059b3;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        nav {
+            background-color: #d6eaff;
+            text-align: center;
+            padding: 12px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #004080;
+            margin: 15px;
+            font-weight: bold;
+        }
+
+        .container {
+            width: 85%;
+            margin: 20px auto;
+        }
+
+        .question {
+            background-color: white;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 8px;
+            box-shadow: 0 0 5px #ccc;
+        }
+
+        button {
+            background-color: #0059b3;
+            color: white;
+            padding: 8px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .answer {
+            display: none;
+            margin-top: 15px;
+        }
+
+        pre {
+            background-color: #eaf3ff;
+            padding: 15px;
+            overflow-x: auto;
+        }
+
+        footer {
+            background-color: #0059b3;
+            color: white;
+            text-align: center;
+            padding: 12px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Nested Loops in C</h1>
+    <p>BCA First Year - C Programming Practice</p>
+</header>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="structures.html">Previous</a>
+</nav>
+
+<div class="container">
+
+    <h2>Nested Loops</h2>
+    <p>A nested loop is a loop inside another loop.</p>
+
+    <div class="question">
+        <h3>Q1. Write a program to print the following pattern using nested loops.</h3>
+
+        <pre>
+11111
+11111
+11111
+        </pre>
+
+        <button onclick="showAnswer(this)">Show Answer</button>
+
+        <div class="answer">
+            <pre><code>#include &lt;stdio.h&gt;
+
+int main()
+{
+    int i, j;
+
+    for(i = 1; i &lt;= 3; i++)
+    {
+        for(j = 1; j &lt;= 5; j++)
+        {
+            printf("1");
+        }
+
+        printf("\n");
+    }
+
+    return 0;
+}</code></pre>
+
+            <p><b>Output:</b></p>
+            <pre>
+11111
+11111
+11111
+            </pre>
+        </div>
+    </div>
+
+</div>
+
+<footer>
+    <p>Created for BCA-1 C Programming Project</p>
+</footer>
+
+<script>
+function showAnswer(button)
+{
+    let answer = button.nextElementSibling;
+
+    if(answer.style.display == "block")
+    {
+        answer.style.display = "none";
+        button.innerText = "Show Answer";
+    }
+    else
+    {
+        answer.style.display = "block";
+        button.innerText = "Hide Answer";
+    }
+}
+</script>
+
+</body>
+</html>
